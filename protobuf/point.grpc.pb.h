@@ -28,7 +28,7 @@
 
 namespace TSCached {
 
-class TSCachedService {
+class TSCachedService final {
  public:
   static constexpr char const* service_full_name() {
     return "TSCached.TSCachedService";
@@ -43,12 +43,12 @@ class TSCachedService {
     std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::QueryResponse>> PrepareAsyncQueryPoints(::grpc::ClientContext* context, const ::TSCached::QueryRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::QueryResponse>>(PrepareAsyncQueryPointsRaw(context, request, cq));
     }
-    virtual ::grpc::Status InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::TSCached::WriteResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>> AsyncInsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>>(AsyncInsertPointsRaw(context, request, cq));
+    virtual ::grpc::Status WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::TSCached::WriteResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>> AsyncWritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>>(AsyncWritePointsRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>> PrepareAsyncInsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>>(PrepareAsyncInsertPointsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>> PrepareAsyncWritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>>(PrepareAsyncWritePointsRaw(context, request, cq));
     }
     class experimental_async_interface {
      public:
@@ -65,17 +65,17 @@ class TSCachedService {
       #else
       virtual void QueryPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::QueryResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      virtual void InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void InsertPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)>) = 0;
+      virtual void WritePoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void InsertPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
+      virtual void WritePoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
-      virtual void InsertPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
+      virtual void WritePoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
     };
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -88,8 +88,8 @@ class TSCachedService {
   private:
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::QueryResponse>* AsyncQueryPointsRaw(::grpc::ClientContext* context, const ::TSCached::QueryRequest& request, ::grpc::CompletionQueue* cq) = 0;
     virtual ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::QueryResponse>* PrepareAsyncQueryPointsRaw(::grpc::ClientContext* context, const ::TSCached::QueryRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>* AsyncInsertPointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>* PrepareAsyncInsertPointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>* AsyncWritePointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::TSCached::WriteResponse>* PrepareAsyncWritePointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
@@ -101,12 +101,12 @@ class TSCachedService {
     std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::QueryResponse>> PrepareAsyncQueryPoints(::grpc::ClientContext* context, const ::TSCached::QueryRequest& request, ::grpc::CompletionQueue* cq) {
       return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::QueryResponse>>(PrepareAsyncQueryPointsRaw(context, request, cq));
     }
-    ::grpc::Status InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::TSCached::WriteResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>> AsyncInsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>>(AsyncInsertPointsRaw(context, request, cq));
+    ::grpc::Status WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::TSCached::WriteResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>> AsyncWritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>>(AsyncWritePointsRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>> PrepareAsyncInsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>>(PrepareAsyncInsertPointsRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>> PrepareAsyncWritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>>(PrepareAsyncWritePointsRaw(context, request, cq));
     }
     class experimental_async final :
       public StubInterface::experimental_async_interface {
@@ -123,17 +123,17 @@ class TSCachedService {
       #else
       void QueryPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::QueryResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      void InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)>) override;
-      void InsertPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)>) override;
+      void WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)>) override;
+      void WritePoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void InsertPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
+      void WritePoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
-      void InsertPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
+      void WritePoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
      private:
       friend class Stub;
@@ -148,10 +148,10 @@ class TSCachedService {
     class experimental_async async_stub_{this};
     ::grpc::ClientAsyncResponseReader< ::TSCached::QueryResponse>* AsyncQueryPointsRaw(::grpc::ClientContext* context, const ::TSCached::QueryRequest& request, ::grpc::CompletionQueue* cq) override;
     ::grpc::ClientAsyncResponseReader< ::TSCached::QueryResponse>* PrepareAsyncQueryPointsRaw(::grpc::ClientContext* context, const ::TSCached::QueryRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>* AsyncInsertPointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>* PrepareAsyncInsertPointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>* AsyncWritePointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>* PrepareAsyncWritePointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_QueryPoints_;
-    const ::grpc::internal::RpcMethod rpcmethod_InsertPoints_;
+    const ::grpc::internal::RpcMethod rpcmethod_WritePoints_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -160,7 +160,7 @@ class TSCachedService {
     Service();
     virtual ~Service();
     virtual ::grpc::Status QueryPoints(::grpc::ServerContext* context, const ::TSCached::QueryRequest* request, ::TSCached::QueryResponse* response);
-    virtual ::grpc::Status InsertPoints(::grpc::ServerContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response);
+    virtual ::grpc::Status WritePoints(::grpc::ServerContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_QueryPoints : public BaseClass {
@@ -183,26 +183,26 @@ class TSCachedService {
     }
   };
   template <class BaseClass>
-  class WithAsyncMethod_InsertPoints : public BaseClass {
+  class WithAsyncMethod_WritePoints : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithAsyncMethod_InsertPoints() {
+    WithAsyncMethod_WritePoints() {
       ::grpc::Service::MarkMethodAsync(1);
     }
-    ~WithAsyncMethod_InsertPoints() override {
+    ~WithAsyncMethod_WritePoints() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InsertPoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
+    ::grpc::Status WritePoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestInsertPoints(::grpc::ServerContext* context, ::TSCached::WriteRequest* request, ::grpc::ServerAsyncResponseWriter< ::TSCached::WriteResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestWritePoints(::grpc::ServerContext* context, ::TSCached::WriteRequest* request, ::grpc::ServerAsyncResponseWriter< ::TSCached::WriteResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_QueryPoints<WithAsyncMethod_InsertPoints<Service > > AsyncService;
+  typedef WithAsyncMethod_QueryPoints<WithAsyncMethod_WritePoints<Service > > AsyncService;
   template <class BaseClass>
   class ExperimentalWithCallbackMethod_QueryPoints : public BaseClass {
    private:
@@ -251,11 +251,11 @@ class TSCachedService {
       { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithCallbackMethod_InsertPoints : public BaseClass {
+  class ExperimentalWithCallbackMethod_WritePoints : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithCallbackMethod_InsertPoints() {
+    ExperimentalWithCallbackMethod_WritePoints() {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::Service::
     #else
@@ -269,8 +269,8 @@ class TSCachedService {
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response) { return this->InsertPoints(context, request, response); }));}
-    void SetMessageAllocatorFor_InsertPoints(
+                     context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response) { return this->WritePoints(context, request, response); }));}
+    void SetMessageAllocatorFor_WritePoints(
         ::grpc::experimental::MessageAllocator< ::TSCached::WriteRequest, ::TSCached::WriteResponse>* allocator) {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::GetHandler(1);
@@ -280,28 +280,28 @@ class TSCachedService {
       static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::TSCached::WriteRequest, ::TSCached::WriteResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
-    ~ExperimentalWithCallbackMethod_InsertPoints() override {
+    ~ExperimentalWithCallbackMethod_WritePoints() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InsertPoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
+    ::grpc::Status WritePoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    virtual ::grpc::ServerUnaryReactor* InsertPoints(
+    virtual ::grpc::ServerUnaryReactor* WritePoints(
       ::grpc::CallbackServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/)
     #else
-    virtual ::grpc::experimental::ServerUnaryReactor* InsertPoints(
+    virtual ::grpc::experimental::ServerUnaryReactor* WritePoints(
       ::grpc::experimental::CallbackServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/)
     #endif
       { return nullptr; }
   };
   #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-  typedef ExperimentalWithCallbackMethod_QueryPoints<ExperimentalWithCallbackMethod_InsertPoints<Service > > CallbackService;
+  typedef ExperimentalWithCallbackMethod_QueryPoints<ExperimentalWithCallbackMethod_WritePoints<Service > > CallbackService;
   #endif
 
-  typedef ExperimentalWithCallbackMethod_QueryPoints<ExperimentalWithCallbackMethod_InsertPoints<Service > > ExperimentalCallbackService;
+  typedef ExperimentalWithCallbackMethod_QueryPoints<ExperimentalWithCallbackMethod_WritePoints<Service > > ExperimentalCallbackService;
   template <class BaseClass>
   class WithGenericMethod_QueryPoints : public BaseClass {
    private:
@@ -320,18 +320,18 @@ class TSCachedService {
     }
   };
   template <class BaseClass>
-  class WithGenericMethod_InsertPoints : public BaseClass {
+  class WithGenericMethod_WritePoints : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithGenericMethod_InsertPoints() {
+    WithGenericMethod_WritePoints() {
       ::grpc::Service::MarkMethodGeneric(1);
     }
-    ~WithGenericMethod_InsertPoints() override {
+    ~WithGenericMethod_WritePoints() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InsertPoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
+    ::grpc::Status WritePoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -357,22 +357,22 @@ class TSCachedService {
     }
   };
   template <class BaseClass>
-  class WithRawMethod_InsertPoints : public BaseClass {
+  class WithRawMethod_WritePoints : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithRawMethod_InsertPoints() {
+    WithRawMethod_WritePoints() {
       ::grpc::Service::MarkMethodRaw(1);
     }
-    ~WithRawMethod_InsertPoints() override {
+    ~WithRawMethod_WritePoints() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InsertPoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
+    ::grpc::Status WritePoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestInsertPoints(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestWritePoints(::grpc::ServerContext* context, ::grpc::ByteBuffer* request, ::grpc::ServerAsyncResponseWriter< ::grpc::ByteBuffer>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
@@ -415,11 +415,11 @@ class TSCachedService {
       { return nullptr; }
   };
   template <class BaseClass>
-  class ExperimentalWithRawCallbackMethod_InsertPoints : public BaseClass {
+  class ExperimentalWithRawCallbackMethod_WritePoints : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    ExperimentalWithRawCallbackMethod_InsertPoints() {
+    ExperimentalWithRawCallbackMethod_WritePoints() {
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       ::grpc::Service::
     #else
@@ -433,21 +433,21 @@ class TSCachedService {
     #else
                    ::grpc::experimental::CallbackServerContext*
     #endif
-                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->InsertPoints(context, request, response); }));
+                     context, const ::grpc::ByteBuffer* request, ::grpc::ByteBuffer* response) { return this->WritePoints(context, request, response); }));
     }
-    ~ExperimentalWithRawCallbackMethod_InsertPoints() override {
+    ~ExperimentalWithRawCallbackMethod_WritePoints() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status InsertPoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
+    ::grpc::Status WritePoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-    virtual ::grpc::ServerUnaryReactor* InsertPoints(
+    virtual ::grpc::ServerUnaryReactor* WritePoints(
       ::grpc::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
     #else
-    virtual ::grpc::experimental::ServerUnaryReactor* InsertPoints(
+    virtual ::grpc::experimental::ServerUnaryReactor* WritePoints(
       ::grpc::experimental::CallbackServerContext* /*context*/, const ::grpc::ByteBuffer* /*request*/, ::grpc::ByteBuffer* /*response*/)
     #endif
       { return nullptr; }
@@ -473,28 +473,28 @@ class TSCachedService {
     virtual ::grpc::Status StreamedQueryPoints(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::TSCached::QueryRequest,::TSCached::QueryResponse>* server_unary_streamer) = 0;
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_InsertPoints : public BaseClass {
+  class WithStreamedUnaryMethod_WritePoints : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service* /*service*/) {}
    public:
-    WithStreamedUnaryMethod_InsertPoints() {
+    WithStreamedUnaryMethod_WritePoints() {
       ::grpc::Service::MarkMethodStreamed(1,
-        new ::grpc::internal::StreamedUnaryHandler< ::TSCached::WriteRequest, ::TSCached::WriteResponse>(std::bind(&WithStreamedUnaryMethod_InsertPoints<BaseClass>::StreamedInsertPoints, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::internal::StreamedUnaryHandler< ::TSCached::WriteRequest, ::TSCached::WriteResponse>(std::bind(&WithStreamedUnaryMethod_WritePoints<BaseClass>::StreamedWritePoints, this, std::placeholders::_1, std::placeholders::_2)));
     }
-    ~WithStreamedUnaryMethod_InsertPoints() override {
+    ~WithStreamedUnaryMethod_WritePoints() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status InsertPoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
+    ::grpc::Status WritePoints(::grpc::ServerContext* /*context*/, const ::TSCached::WriteRequest* /*request*/, ::TSCached::WriteResponse* /*response*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status StreamedInsertPoints(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::TSCached::WriteRequest,::TSCached::WriteResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status StreamedWritePoints(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::TSCached::WriteRequest,::TSCached::WriteResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_QueryPoints<WithStreamedUnaryMethod_InsertPoints<Service > > StreamedUnaryService;
+  typedef WithStreamedUnaryMethod_QueryPoints<WithStreamedUnaryMethod_WritePoints<Service > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_QueryPoints<WithStreamedUnaryMethod_InsertPoints<Service > > StreamedService;
+  typedef WithStreamedUnaryMethod_QueryPoints<WithStreamedUnaryMethod_WritePoints<Service > > StreamedService;
 };
 
 }  // namespace TSCached

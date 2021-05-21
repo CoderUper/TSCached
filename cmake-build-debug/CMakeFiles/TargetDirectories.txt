@@ -1,3 +1,3 @@
-E:/Clion/TSCached/cmake-build-debug/CMakeFiles/TSCached.dir
-E:/Clion/TSCached/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/Clion/TSCached/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/e/Clion/TSCached/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/e/Clion/TSCached/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/e/Clion/TSCached/cmake-build-debug/CMakeFiles/TSCached.dir

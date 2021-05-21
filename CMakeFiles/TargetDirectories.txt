@@ -1,0 +1,3 @@
+/home/jinzhuguang/code/TSCached/CMakeFiles/rebuild_cache.dir
+/home/jinzhuguang/code/TSCached/CMakeFiles/edit_cache.dir
+/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir

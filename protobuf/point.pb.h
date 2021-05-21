@@ -34,6 +34,7 @@
 #include <google/protobuf/map.h>  // IWYU pragma: export
 #include <google/protobuf/map_entry.h>
 #include <google/protobuf/map_field_inl.h>
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -58,15 +59,18 @@ struct TableStruct_point_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_point_2eproto;
 namespace TSCached {
-class Field;
-class FieldDefaultTypeInternal;
-extern FieldDefaultTypeInternal _Field_default_instance_;
-class Field_FieldsEntry_DoNotUse;
-class Field_FieldsEntry_DoNotUseDefaultTypeInternal;
-extern Field_FieldsEntry_DoNotUseDefaultTypeInternal _Field_FieldsEntry_DoNotUse_default_instance_;
-class Points;
-class PointsDefaultTypeInternal;
-extern PointsDefaultTypeInternal _Points_default_instance_;
+class Metrics;
+class MetricsDefaultTypeInternal;
+extern MetricsDefaultTypeInternal _Metrics_default_instance_;
+class Metrics_FieldsEntry_DoNotUse;
+class Metrics_FieldsEntry_DoNotUseDefaultTypeInternal;
+extern Metrics_FieldsEntry_DoNotUseDefaultTypeInternal _Metrics_FieldsEntry_DoNotUse_default_instance_;
+class Point;
+class PointDefaultTypeInternal;
+extern PointDefaultTypeInternal _Point_default_instance_;
+class Point_TagsEntry_DoNotUse;
+class Point_TagsEntry_DoNotUseDefaultTypeInternal;
+extern Point_TagsEntry_DoNotUseDefaultTypeInternal _Point_TagsEntry_DoNotUse_default_instance_;
 class QueryRequest;
 class QueryRequestDefaultTypeInternal;
 extern QueryRequestDefaultTypeInternal _QueryRequest_default_instance_;
@@ -82,46 +86,68 @@ extern QueryResponse_TagsEntry_DoNotUseDefaultTypeInternal _QueryResponse_TagsEn
 class WriteRequest;
 class WriteRequestDefaultTypeInternal;
 extern WriteRequestDefaultTypeInternal _WriteRequest_default_instance_;
-class WriteRequest_TagsEntry_DoNotUse;
-class WriteRequest_TagsEntry_DoNotUseDefaultTypeInternal;
-extern WriteRequest_TagsEntry_DoNotUseDefaultTypeInternal _WriteRequest_TagsEntry_DoNotUse_default_instance_;
 class WriteResponse;
 class WriteResponseDefaultTypeInternal;
 extern WriteResponseDefaultTypeInternal _WriteResponse_default_instance_;
 }  // namespace TSCached
 PROTOBUF_NAMESPACE_OPEN
-template<> ::TSCached::Field* Arena::CreateMaybeMessage<::TSCached::Field>(Arena*);
-template<> ::TSCached::Field_FieldsEntry_DoNotUse* Arena::CreateMaybeMessage<::TSCached::Field_FieldsEntry_DoNotUse>(Arena*);
-template<> ::TSCached::Points* Arena::CreateMaybeMessage<::TSCached::Points>(Arena*);
+template<> ::TSCached::Metrics* Arena::CreateMaybeMessage<::TSCached::Metrics>(Arena*);
+template<> ::TSCached::Metrics_FieldsEntry_DoNotUse* Arena::CreateMaybeMessage<::TSCached::Metrics_FieldsEntry_DoNotUse>(Arena*);
+template<> ::TSCached::Point* Arena::CreateMaybeMessage<::TSCached::Point>(Arena*);
+template<> ::TSCached::Point_TagsEntry_DoNotUse* Arena::CreateMaybeMessage<::TSCached::Point_TagsEntry_DoNotUse>(Arena*);
 template<> ::TSCached::QueryRequest* Arena::CreateMaybeMessage<::TSCached::QueryRequest>(Arena*);
 template<> ::TSCached::QueryRequest_TagsEntry_DoNotUse* Arena::CreateMaybeMessage<::TSCached::QueryRequest_TagsEntry_DoNotUse>(Arena*);
 template<> ::TSCached::QueryResponse* Arena::CreateMaybeMessage<::TSCached::QueryResponse>(Arena*);
 template<> ::TSCached::QueryResponse_TagsEntry_DoNotUse* Arena::CreateMaybeMessage<::TSCached::QueryResponse_TagsEntry_DoNotUse>(Arena*);
 template<> ::TSCached::WriteRequest* Arena::CreateMaybeMessage<::TSCached::WriteRequest>(Arena*);
-template<> ::TSCached::WriteRequest_TagsEntry_DoNotUse* Arena::CreateMaybeMessage<::TSCached::WriteRequest_TagsEntry_DoNotUse>(Arena*);
 template<> ::TSCached::WriteResponse* Arena::CreateMaybeMessage<::TSCached::WriteResponse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace TSCached {
 
+enum StatusCode : int {
+  OK = 0,
+  ERROR = 1,
+  StatusCode_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  StatusCode_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool StatusCode_IsValid(int value);
+constexpr StatusCode StatusCode_MIN = OK;
+constexpr StatusCode StatusCode_MAX = ERROR;
+constexpr int StatusCode_ARRAYSIZE = StatusCode_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* StatusCode_descriptor();
+template<typename T>
+inline const std::string& StatusCode_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, StatusCode>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function StatusCode_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    StatusCode_descriptor(), enum_t_value);
+}
+inline bool StatusCode_Parse(
+    const std::string& name, StatusCode* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<StatusCode>(
+    StatusCode_descriptor(), name, value);
+}
 // ===================================================================
 
-class Field_FieldsEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<Field_FieldsEntry_DoNotUse, 
+class Metrics_FieldsEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<Metrics_FieldsEntry_DoNotUse, 
     std::string, double,
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE,
     0 > {
 public:
-  typedef ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<Field_FieldsEntry_DoNotUse, 
+  typedef ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<Metrics_FieldsEntry_DoNotUse, 
     std::string, double,
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE,
     0 > SuperType;
-  Field_FieldsEntry_DoNotUse();
-  Field_FieldsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  void MergeFrom(const Field_FieldsEntry_DoNotUse& other);
-  static const Field_FieldsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const Field_FieldsEntry_DoNotUse*>(&_Field_FieldsEntry_DoNotUse_default_instance_); }
+  Metrics_FieldsEntry_DoNotUse();
+  Metrics_FieldsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  void MergeFrom(const Metrics_FieldsEntry_DoNotUse& other);
+  static const Metrics_FieldsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const Metrics_FieldsEntry_DoNotUse*>(&_Metrics_FieldsEntry_DoNotUse_default_instance_); }
   static bool ValidateKey(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "TSCached.Field.FieldsEntry.key");
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "TSCached.Metrics.FieldsEntry.key");
  }
   static bool ValidateValue(void*) { return true; }
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& other) final;
@@ -137,23 +163,23 @@ public:
 
 // -------------------------------------------------------------------
 
-class Field :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:TSCached.Field) */ {
+class Metrics :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:TSCached.Metrics) */ {
  public:
-  Field();
-  virtual ~Field();
+  Metrics();
+  virtual ~Metrics();
 
-  Field(const Field& from);
-  Field(Field&& from) noexcept
-    : Field() {
+  Metrics(const Metrics& from);
+  Metrics(Metrics&& from) noexcept
+    : Metrics() {
     *this = ::std::move(from);
   }
 
-  inline Field& operator=(const Field& from) {
+  inline Metrics& operator=(const Metrics& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Field& operator=(Field&& from) noexcept {
+  inline Metrics& operator=(Metrics&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -171,37 +197,37 @@ class Field :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const Field& default_instance();
+  static const Metrics& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Field* internal_default_instance() {
-    return reinterpret_cast<const Field*>(
-               &_Field_default_instance_);
+  static inline const Metrics* internal_default_instance() {
+    return reinterpret_cast<const Metrics*>(
+               &_Metrics_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(Field& a, Field& b) {
+  friend void swap(Metrics& a, Metrics& b) {
     a.Swap(&b);
   }
-  inline void Swap(Field* other) {
+  inline void Swap(Metrics* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline Field* New() const final {
-    return CreateMaybeMessage<Field>(nullptr);
+  inline Metrics* New() const final {
+    return CreateMaybeMessage<Metrics>(nullptr);
   }
 
-  Field* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Field>(arena);
+  Metrics* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Metrics>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Field& from);
-  void MergeFrom(const Field& from);
+  void CopyFrom(const Metrics& from);
+  void MergeFrom(const Metrics& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -215,10 +241,10 @@ class Field :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Field* other);
+  void InternalSwap(Metrics* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "TSCached.Field";
+    return "TSCached.Metrics";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -244,10 +270,10 @@ class Field :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFieldsFieldNumber = 1,
-    kTimestampFieldNumber = 2,
+    kFieldsFieldNumber = 2,
+    kTimeStampFieldNumber = 1,
   };
-  // map<string, double> fields = 1;
+  // map<string, double> fields = 2;
   int fields_size() const;
   private:
   int _internal_fields_size() const;
@@ -264,7 +290,7 @@ class Field :
   ::PROTOBUF_NAMESPACE_ID::Map< std::string, double >*
       mutable_fields();
 
-  // int64 timestamp = 2;
+  // int64 timeStamp = 1;
   void clear_timestamp();
   ::PROTOBUF_NAMESPACE_ID::int64 timestamp() const;
   void set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
@@ -273,13 +299,13 @@ class Field :
   void _internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:TSCached.Field)
+  // @@protoc_insertion_point(class_scope:TSCached.Metrics)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::MapField<
-      Field_FieldsEntry_DoNotUse,
+      Metrics_FieldsEntry_DoNotUse,
       std::string, double,
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_DOUBLE,
@@ -290,23 +316,57 @@ class Field :
 };
 // -------------------------------------------------------------------
 
-class Points :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:TSCached.Points) */ {
- public:
-  Points();
-  virtual ~Points();
+class Point_TagsEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<Point_TagsEntry_DoNotUse, 
+    std::string, std::string,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+    0 > {
+public:
+  typedef ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<Point_TagsEntry_DoNotUse, 
+    std::string, std::string,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+    0 > SuperType;
+  Point_TagsEntry_DoNotUse();
+  Point_TagsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  void MergeFrom(const Point_TagsEntry_DoNotUse& other);
+  static const Point_TagsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const Point_TagsEntry_DoNotUse*>(&_Point_TagsEntry_DoNotUse_default_instance_); }
+  static bool ValidateKey(std::string* s) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "TSCached.Point.TagsEntry.key");
+ }
+  static bool ValidateValue(std::string* s) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "TSCached.Point.TagsEntry.value");
+ }
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& other) final;
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_point_2eproto);
+    return ::descriptor_table_point_2eproto.file_level_metadata[2];
+  }
 
-  Points(const Points& from);
-  Points(Points&& from) noexcept
-    : Points() {
+  public:
+};
+
+// -------------------------------------------------------------------
+
+class Point :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:TSCached.Point) */ {
+ public:
+  Point();
+  virtual ~Point();
+
+  Point(const Point& from);
+  Point(Point&& from) noexcept
+    : Point() {
     *this = ::std::move(from);
   }
 
-  inline Points& operator=(const Points& from) {
+  inline Point& operator=(const Point& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Points& operator=(Points&& from) noexcept {
+  inline Point& operator=(Point&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -324,37 +384,37 @@ class Points :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const Points& default_instance();
+  static const Point& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Points* internal_default_instance() {
-    return reinterpret_cast<const Points*>(
-               &_Points_default_instance_);
+  static inline const Point* internal_default_instance() {
+    return reinterpret_cast<const Point*>(
+               &_Point_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    3;
 
-  friend void swap(Points& a, Points& b) {
+  friend void swap(Point& a, Point& b) {
     a.Swap(&b);
   }
-  inline void Swap(Points* other) {
+  inline void Swap(Point* other) {
     if (other == this) return;
     InternalSwap(other);
   }
 
   // implements Message ----------------------------------------------
 
-  inline Points* New() const final {
-    return CreateMaybeMessage<Points>(nullptr);
+  inline Point* New() const final {
+    return CreateMaybeMessage<Point>(nullptr);
   }
 
-  Points* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Points>(arena);
+  Point* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Point>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Points& from);
-  void MergeFrom(const Points& from);
+  void CopyFrom(const Point& from);
+  void MergeFrom(const Point& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -368,10 +428,10 @@ class Points :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Points* other);
+  void InternalSwap(Point* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "TSCached.Points";
+    return "TSCached.Point";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -393,35 +453,96 @@ class Points :
 
   // nested types ----------------------------------------------------
 
+
   // accessors -------------------------------------------------------
 
   enum : int {
-    kFieldsFieldNumber = 4,
+    kTagsFieldNumber = 3,
+    kMetricsFieldNumber = 4,
+    kDataBaseFieldNumber = 1,
+    kTableNameFieldNumber = 2,
   };
-  // repeated .TSCached.Field fields = 4;
-  int fields_size() const;
+  // map<string, string> tags = 3;
+  int tags_size() const;
   private:
-  int _internal_fields_size() const;
+  int _internal_tags_size() const;
   public:
-  void clear_fields();
-  ::TSCached::Field* mutable_fields(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Field >*
-      mutable_fields();
+  void clear_tags();
   private:
-  const ::TSCached::Field& _internal_fields(int index) const;
-  ::TSCached::Field* _internal_add_fields();
+  const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
+      _internal_tags() const;
+  ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
+      _internal_mutable_tags();
   public:
-  const ::TSCached::Field& fields(int index) const;
-  ::TSCached::Field* add_fields();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Field >&
-      fields() const;
+  const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
+      tags() const;
+  ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
+      mutable_tags();
 
-  // @@protoc_insertion_point(class_scope:TSCached.Points)
+  // repeated .TSCached.Metrics metrics = 4;
+  int metrics_size() const;
+  private:
+  int _internal_metrics_size() const;
+  public:
+  void clear_metrics();
+  ::TSCached::Metrics* mutable_metrics(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics >*
+      mutable_metrics();
+  private:
+  const ::TSCached::Metrics& _internal_metrics(int index) const;
+  ::TSCached::Metrics* _internal_add_metrics();
+  public:
+  const ::TSCached::Metrics& metrics(int index) const;
+  ::TSCached::Metrics* add_metrics();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics >&
+      metrics() const;
+
+  // string dataBase = 1;
+  void clear_database();
+  const std::string& database() const;
+  void set_database(const std::string& value);
+  void set_database(std::string&& value);
+  void set_database(const char* value);
+  void set_database(const char* value, size_t size);
+  std::string* mutable_database();
+  std::string* release_database();
+  void set_allocated_database(std::string* database);
+  private:
+  const std::string& _internal_database() const;
+  void _internal_set_database(const std::string& value);
+  std::string* _internal_mutable_database();
+  public:
+
+  // string tableName = 2;
+  void clear_tablename();
+  const std::string& tablename() const;
+  void set_tablename(const std::string& value);
+  void set_tablename(std::string&& value);
+  void set_tablename(const char* value);
+  void set_tablename(const char* value, size_t size);
+  std::string* mutable_tablename();
+  std::string* release_tablename();
+  void set_allocated_tablename(std::string* tablename);
+  private:
+  const std::string& _internal_tablename() const;
+  void _internal_set_tablename(const std::string& value);
+  std::string* _internal_mutable_tablename();
+  public:
+
+  // @@protoc_insertion_point(class_scope:TSCached.Point)
  private:
   class _Internal;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Field > fields_;
+  ::PROTOBUF_NAMESPACE_ID::internal::MapField<
+      Point_TagsEntry_DoNotUse,
+      std::string, std::string,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+      0 > tags_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics > metrics_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr database_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tablename_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_point_2eproto;
 };
@@ -453,7 +574,7 @@ public:
   private:
   static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
     ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_point_2eproto);
-    return ::descriptor_table_point_2eproto.file_level_metadata[3];
+    return ::descriptor_table_point_2eproto.file_level_metadata[4];
   }
 
   public:
@@ -503,7 +624,7 @@ class QueryRequest :
                &_QueryRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    4;
+    5;
 
   friend void swap(QueryRequest& a, QueryRequest& b) {
     a.Swap(&b);
@@ -661,235 +782,6 @@ class QueryRequest :
 };
 // -------------------------------------------------------------------
 
-class WriteRequest_TagsEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<WriteRequest_TagsEntry_DoNotUse, 
-    std::string, std::string,
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-    0 > {
-public:
-  typedef ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<WriteRequest_TagsEntry_DoNotUse, 
-    std::string, std::string,
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-    0 > SuperType;
-  WriteRequest_TagsEntry_DoNotUse();
-  WriteRequest_TagsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  void MergeFrom(const WriteRequest_TagsEntry_DoNotUse& other);
-  static const WriteRequest_TagsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const WriteRequest_TagsEntry_DoNotUse*>(&_WriteRequest_TagsEntry_DoNotUse_default_instance_); }
-  static bool ValidateKey(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "TSCached.WriteRequest.TagsEntry.key");
- }
-  static bool ValidateValue(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "TSCached.WriteRequest.TagsEntry.value");
- }
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& other) final;
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_point_2eproto);
-    return ::descriptor_table_point_2eproto.file_level_metadata[5];
-  }
-
-  public:
-};
-
-// -------------------------------------------------------------------
-
-class WriteRequest :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:TSCached.WriteRequest) */ {
- public:
-  WriteRequest();
-  virtual ~WriteRequest();
-
-  WriteRequest(const WriteRequest& from);
-  WriteRequest(WriteRequest&& from) noexcept
-    : WriteRequest() {
-    *this = ::std::move(from);
-  }
-
-  inline WriteRequest& operator=(const WriteRequest& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline WriteRequest& operator=(WriteRequest&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const WriteRequest& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const WriteRequest* internal_default_instance() {
-    return reinterpret_cast<const WriteRequest*>(
-               &_WriteRequest_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    6;
-
-  friend void swap(WriteRequest& a, WriteRequest& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(WriteRequest* other) {
-    if (other == this) return;
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline WriteRequest* New() const final {
-    return CreateMaybeMessage<WriteRequest>(nullptr);
-  }
-
-  WriteRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<WriteRequest>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const WriteRequest& from);
-  void MergeFrom(const WriteRequest& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(WriteRequest* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "TSCached.WriteRequest";
-  }
-  private:
-  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
-    return nullptr;
-  }
-  inline void* MaybeArenaPtr() const {
-    return nullptr;
-  }
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_point_2eproto);
-    return ::descriptor_table_point_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kTagsFieldNumber = 3,
-    kDataBaseFieldNumber = 1,
-    kTableNameFieldNumber = 2,
-    kPointsFieldNumber = 4,
-  };
-  // map<string, string> tags = 3;
-  int tags_size() const;
-  private:
-  int _internal_tags_size() const;
-  public:
-  void clear_tags();
-  private:
-  const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
-      _internal_tags() const;
-  ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
-      _internal_mutable_tags();
-  public:
-  const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
-      tags() const;
-  ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
-      mutable_tags();
-
-  // string dataBase = 1;
-  void clear_database();
-  const std::string& database() const;
-  void set_database(const std::string& value);
-  void set_database(std::string&& value);
-  void set_database(const char* value);
-  void set_database(const char* value, size_t size);
-  std::string* mutable_database();
-  std::string* release_database();
-  void set_allocated_database(std::string* database);
-  private:
-  const std::string& _internal_database() const;
-  void _internal_set_database(const std::string& value);
-  std::string* _internal_mutable_database();
-  public:
-
-  // string tableName = 2;
-  void clear_tablename();
-  const std::string& tablename() const;
-  void set_tablename(const std::string& value);
-  void set_tablename(std::string&& value);
-  void set_tablename(const char* value);
-  void set_tablename(const char* value, size_t size);
-  std::string* mutable_tablename();
-  std::string* release_tablename();
-  void set_allocated_tablename(std::string* tablename);
-  private:
-  const std::string& _internal_tablename() const;
-  void _internal_set_tablename(const std::string& value);
-  std::string* _internal_mutable_tablename();
-  public:
-
-  // .TSCached.Points points = 4;
-  bool has_points() const;
-  private:
-  bool _internal_has_points() const;
-  public:
-  void clear_points();
-  const ::TSCached::Points& points() const;
-  ::TSCached::Points* release_points();
-  ::TSCached::Points* mutable_points();
-  void set_allocated_points(::TSCached::Points* points);
-  private:
-  const ::TSCached::Points& _internal_points() const;
-  ::TSCached::Points* _internal_mutable_points();
-  public:
-
-  // @@protoc_insertion_point(class_scope:TSCached.WriteRequest)
- private:
-  class _Internal;
-
-  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::MapField<
-      WriteRequest_TagsEntry_DoNotUse,
-      std::string, std::string,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-      0 > tags_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr database_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tablename_;
-  ::TSCached::Points* points_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_point_2eproto;
-};
-// -------------------------------------------------------------------
-
 class QueryResponse_TagsEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<QueryResponse_TagsEntry_DoNotUse, 
     std::string, std::string,
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
@@ -916,7 +808,7 @@ public:
   private:
   static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
     ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_point_2eproto);
-    return ::descriptor_table_point_2eproto.file_level_metadata[7];
+    return ::descriptor_table_point_2eproto.file_level_metadata[6];
   }
 
   public:
@@ -966,7 +858,7 @@ class QueryResponse :
                &_QueryResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    8;
+    7;
 
   friend void swap(QueryResponse& a, QueryResponse& b) {
     a.Swap(&b);
@@ -1031,14 +923,12 @@ class QueryResponse :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kTagsFieldNumber = 5,
-    kMessageFieldNumber = 1,
-    kDataBaseFieldNumber = 3,
-    kTableNameFieldNumber = 4,
-    kPointsFieldNumber = 6,
-    kStatusCodeFieldNumber = 2,
+    kTagsFieldNumber = 3,
+    kMetricsFieldNumber = 4,
+    kDataBaseFieldNumber = 1,
+    kTableNameFieldNumber = 2,
   };
-  // map<string, string> tags = 5;
+  // map<string, string> tags = 3;
   int tags_size() const;
   private:
   int _internal_tags_size() const;
@@ -1055,23 +945,25 @@ class QueryResponse :
   ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
       mutable_tags();
 
-  // string message = 1;
-  void clear_message();
-  const std::string& message() const;
-  void set_message(const std::string& value);
-  void set_message(std::string&& value);
-  void set_message(const char* value);
-  void set_message(const char* value, size_t size);
-  std::string* mutable_message();
-  std::string* release_message();
-  void set_allocated_message(std::string* message);
+  // repeated .TSCached.Metrics metrics = 4;
+  int metrics_size() const;
   private:
-  const std::string& _internal_message() const;
-  void _internal_set_message(const std::string& value);
-  std::string* _internal_mutable_message();
+  int _internal_metrics_size() const;
   public:
+  void clear_metrics();
+  ::TSCached::Metrics* mutable_metrics(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics >*
+      mutable_metrics();
+  private:
+  const ::TSCached::Metrics& _internal_metrics(int index) const;
+  ::TSCached::Metrics* _internal_add_metrics();
+  public:
+  const ::TSCached::Metrics& metrics(int index) const;
+  ::TSCached::Metrics* add_metrics();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics >&
+      metrics() const;
 
-  // string dataBase = 3;
+  // string dataBase = 1;
   void clear_database();
   const std::string& database() const;
   void set_database(const std::string& value);
@@ -1087,7 +979,7 @@ class QueryResponse :
   std::string* _internal_mutable_database();
   public:
 
-  // string tableName = 4;
+  // string tableName = 2;
   void clear_tablename();
   const std::string& tablename() const;
   void set_tablename(const std::string& value);
@@ -1103,30 +995,6 @@ class QueryResponse :
   std::string* _internal_mutable_tablename();
   public:
 
-  // .TSCached.Points points = 6;
-  bool has_points() const;
-  private:
-  bool _internal_has_points() const;
-  public:
-  void clear_points();
-  const ::TSCached::Points& points() const;
-  ::TSCached::Points* release_points();
-  ::TSCached::Points* mutable_points();
-  void set_allocated_points(::TSCached::Points* points);
-  private:
-  const ::TSCached::Points& _internal_points() const;
-  ::TSCached::Points* _internal_mutable_points();
-  public:
-
-  // int32 statusCode = 2;
-  void clear_statuscode();
-  ::PROTOBUF_NAMESPACE_ID::int32 statuscode() const;
-  void set_statuscode(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_statuscode() const;
-  void _internal_set_statuscode(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
   // @@protoc_insertion_point(class_scope:TSCached.QueryResponse)
  private:
   class _Internal;
@@ -1138,11 +1006,146 @@ class QueryResponse :
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
       0 > tags_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics > metrics_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr database_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr tablename_;
-  ::TSCached::Points* points_;
-  ::PROTOBUF_NAMESPACE_ID::int32 statuscode_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_point_2eproto;
+};
+// -------------------------------------------------------------------
+
+class WriteRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:TSCached.WriteRequest) */ {
+ public:
+  WriteRequest();
+  virtual ~WriteRequest();
+
+  WriteRequest(const WriteRequest& from);
+  WriteRequest(WriteRequest&& from) noexcept
+    : WriteRequest() {
+    *this = ::std::move(from);
+  }
+
+  inline WriteRequest& operator=(const WriteRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline WriteRequest& operator=(WriteRequest&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const WriteRequest& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const WriteRequest* internal_default_instance() {
+    return reinterpret_cast<const WriteRequest*>(
+               &_WriteRequest_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(WriteRequest& a, WriteRequest& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(WriteRequest* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline WriteRequest* New() const final {
+    return CreateMaybeMessage<WriteRequest>(nullptr);
+  }
+
+  WriteRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<WriteRequest>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const WriteRequest& from);
+  void MergeFrom(const WriteRequest& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(WriteRequest* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "TSCached.WriteRequest";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_point_2eproto);
+    return ::descriptor_table_point_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kPointsFieldNumber = 1,
+  };
+  // repeated .TSCached.Point points = 1;
+  int points_size() const;
+  private:
+  int _internal_points_size() const;
+  public:
+  void clear_points();
+  ::TSCached::Point* mutable_points(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Point >*
+      mutable_points();
+  private:
+  const ::TSCached::Point& _internal_points(int index) const;
+  ::TSCached::Point* _internal_add_points();
+  public:
+  const ::TSCached::Point& points(int index) const;
+  ::TSCached::Point* add_points();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Point >&
+      points() const;
+
+  // @@protoc_insertion_point(class_scope:TSCached.WriteRequest)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Point > points_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_point_2eproto;
 };
@@ -1273,13 +1276,13 @@ class WriteResponse :
   std::string* _internal_mutable_message();
   public:
 
-  // int32 statusCode = 2;
+  // .TSCached.StatusCode statusCode = 2;
   void clear_statuscode();
-  ::PROTOBUF_NAMESPACE_ID::int32 statuscode() const;
-  void set_statuscode(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::TSCached::StatusCode statuscode() const;
+  void set_statuscode(::TSCached::StatusCode value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_statuscode() const;
-  void _internal_set_statuscode(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::TSCached::StatusCode _internal_statuscode() const;
+  void _internal_set_statuscode(::TSCached::StatusCode value);
   public:
 
   // @@protoc_insertion_point(class_scope:TSCached.WriteResponse)
@@ -1288,7 +1291,7 @@ class WriteResponse :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_;
-  ::PROTOBUF_NAMESPACE_ID::int32 statuscode_;
+  int statuscode_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_point_2eproto;
 };
@@ -1303,98 +1306,249 @@ class WriteResponse :
 #endif  // __GNUC__
 // -------------------------------------------------------------------
 
-// Field
+// Metrics
 
-// int64 timestamp = 2;
-inline void Field::clear_timestamp() {
+// int64 timeStamp = 1;
+inline void Metrics::clear_timestamp() {
   timestamp_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 Field::_internal_timestamp() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 Metrics::_internal_timestamp() const {
   return timestamp_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 Field::timestamp() const {
-  // @@protoc_insertion_point(field_get:TSCached.Field.timestamp)
+inline ::PROTOBUF_NAMESPACE_ID::int64 Metrics::timestamp() const {
+  // @@protoc_insertion_point(field_get:TSCached.Metrics.timeStamp)
   return _internal_timestamp();
 }
-inline void Field::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void Metrics::_internal_set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   timestamp_ = value;
 }
-inline void Field::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void Metrics::set_timestamp(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_timestamp(value);
-  // @@protoc_insertion_point(field_set:TSCached.Field.timestamp)
+  // @@protoc_insertion_point(field_set:TSCached.Metrics.timeStamp)
 }
 
-// map<string, double> fields = 1;
-inline int Field::_internal_fields_size() const {
+// map<string, double> fields = 2;
+inline int Metrics::_internal_fields_size() const {
   return fields_.size();
 }
-inline int Field::fields_size() const {
+inline int Metrics::fields_size() const {
   return _internal_fields_size();
 }
-inline void Field::clear_fields() {
+inline void Metrics::clear_fields() {
   fields_.Clear();
 }
 inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, double >&
-Field::_internal_fields() const {
+Metrics::_internal_fields() const {
   return fields_.GetMap();
 }
 inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, double >&
-Field::fields() const {
-  // @@protoc_insertion_point(field_map:TSCached.Field.fields)
+Metrics::fields() const {
+  // @@protoc_insertion_point(field_map:TSCached.Metrics.fields)
   return _internal_fields();
 }
 inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, double >*
-Field::_internal_mutable_fields() {
+Metrics::_internal_mutable_fields() {
   return fields_.MutableMap();
 }
 inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, double >*
-Field::mutable_fields() {
-  // @@protoc_insertion_point(field_mutable_map:TSCached.Field.fields)
+Metrics::mutable_fields() {
+  // @@protoc_insertion_point(field_mutable_map:TSCached.Metrics.fields)
   return _internal_mutable_fields();
 }
 
 // -------------------------------------------------------------------
 
-// Points
+// -------------------------------------------------------------------
 
-// repeated .TSCached.Field fields = 4;
-inline int Points::_internal_fields_size() const {
-  return fields_.size();
+// Point
+
+// string dataBase = 1;
+inline void Point::clear_database() {
+  database_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
-inline int Points::fields_size() const {
-  return _internal_fields_size();
+inline const std::string& Point::database() const {
+  // @@protoc_insertion_point(field_get:TSCached.Point.dataBase)
+  return _internal_database();
 }
-inline void Points::clear_fields() {
-  fields_.Clear();
+inline void Point::set_database(const std::string& value) {
+  _internal_set_database(value);
+  // @@protoc_insertion_point(field_set:TSCached.Point.dataBase)
 }
-inline ::TSCached::Field* Points::mutable_fields(int index) {
-  // @@protoc_insertion_point(field_mutable:TSCached.Points.fields)
-  return fields_.Mutable(index);
+inline std::string* Point::mutable_database() {
+  // @@protoc_insertion_point(field_mutable:TSCached.Point.dataBase)
+  return _internal_mutable_database();
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Field >*
-Points::mutable_fields() {
-  // @@protoc_insertion_point(field_mutable_list:TSCached.Points.fields)
-  return &fields_;
+inline const std::string& Point::_internal_database() const {
+  return database_.GetNoArena();
 }
-inline const ::TSCached::Field& Points::_internal_fields(int index) const {
-  return fields_.Get(index);
+inline void Point::_internal_set_database(const std::string& value) {
+  
+  database_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
 }
-inline const ::TSCached::Field& Points::fields(int index) const {
-  // @@protoc_insertion_point(field_get:TSCached.Points.fields)
-  return _internal_fields(index);
+inline void Point::set_database(std::string&& value) {
+  
+  database_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:TSCached.Point.dataBase)
 }
-inline ::TSCached::Field* Points::_internal_add_fields() {
-  return fields_.Add();
+inline void Point::set_database(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  database_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:TSCached.Point.dataBase)
 }
-inline ::TSCached::Field* Points::add_fields() {
-  // @@protoc_insertion_point(field_add:TSCached.Points.fields)
-  return _internal_add_fields();
+inline void Point::set_database(const char* value, size_t size) {
+  
+  database_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:TSCached.Point.dataBase)
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Field >&
-Points::fields() const {
-  // @@protoc_insertion_point(field_list:TSCached.Points.fields)
-  return fields_;
+inline std::string* Point::_internal_mutable_database() {
+  
+  return database_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* Point::release_database() {
+  // @@protoc_insertion_point(field_release:TSCached.Point.dataBase)
+  
+  return database_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void Point::set_allocated_database(std::string* database) {
+  if (database != nullptr) {
+    
+  } else {
+    
+  }
+  database_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), database);
+  // @@protoc_insertion_point(field_set_allocated:TSCached.Point.dataBase)
+}
+
+// string tableName = 2;
+inline void Point::clear_tablename() {
+  tablename_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& Point::tablename() const {
+  // @@protoc_insertion_point(field_get:TSCached.Point.tableName)
+  return _internal_tablename();
+}
+inline void Point::set_tablename(const std::string& value) {
+  _internal_set_tablename(value);
+  // @@protoc_insertion_point(field_set:TSCached.Point.tableName)
+}
+inline std::string* Point::mutable_tablename() {
+  // @@protoc_insertion_point(field_mutable:TSCached.Point.tableName)
+  return _internal_mutable_tablename();
+}
+inline const std::string& Point::_internal_tablename() const {
+  return tablename_.GetNoArena();
+}
+inline void Point::_internal_set_tablename(const std::string& value) {
+  
+  tablename_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void Point::set_tablename(std::string&& value) {
+  
+  tablename_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:TSCached.Point.tableName)
+}
+inline void Point::set_tablename(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  tablename_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:TSCached.Point.tableName)
+}
+inline void Point::set_tablename(const char* value, size_t size) {
+  
+  tablename_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:TSCached.Point.tableName)
+}
+inline std::string* Point::_internal_mutable_tablename() {
+  
+  return tablename_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* Point::release_tablename() {
+  // @@protoc_insertion_point(field_release:TSCached.Point.tableName)
+  
+  return tablename_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void Point::set_allocated_tablename(std::string* tablename) {
+  if (tablename != nullptr) {
+    
+  } else {
+    
+  }
+  tablename_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), tablename);
+  // @@protoc_insertion_point(field_set_allocated:TSCached.Point.tableName)
+}
+
+// map<string, string> tags = 3;
+inline int Point::_internal_tags_size() const {
+  return tags_.size();
+}
+inline int Point::tags_size() const {
+  return _internal_tags_size();
+}
+inline void Point::clear_tags() {
+  tags_.Clear();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
+Point::_internal_tags() const {
+  return tags_.GetMap();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
+Point::tags() const {
+  // @@protoc_insertion_point(field_map:TSCached.Point.tags)
+  return _internal_tags();
+}
+inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
+Point::_internal_mutable_tags() {
+  return tags_.MutableMap();
+}
+inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
+Point::mutable_tags() {
+  // @@protoc_insertion_point(field_mutable_map:TSCached.Point.tags)
+  return _internal_mutable_tags();
+}
+
+// repeated .TSCached.Metrics metrics = 4;
+inline int Point::_internal_metrics_size() const {
+  return metrics_.size();
+}
+inline int Point::metrics_size() const {
+  return _internal_metrics_size();
+}
+inline void Point::clear_metrics() {
+  metrics_.Clear();
+}
+inline ::TSCached::Metrics* Point::mutable_metrics(int index) {
+  // @@protoc_insertion_point(field_mutable:TSCached.Point.metrics)
+  return metrics_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics >*
+Point::mutable_metrics() {
+  // @@protoc_insertion_point(field_mutable_list:TSCached.Point.metrics)
+  return &metrics_;
+}
+inline const ::TSCached::Metrics& Point::_internal_metrics(int index) const {
+  return metrics_.Get(index);
+}
+inline const ::TSCached::Metrics& Point::metrics(int index) const {
+  // @@protoc_insertion_point(field_get:TSCached.Point.metrics)
+  return _internal_metrics(index);
+}
+inline ::TSCached::Metrics* Point::_internal_add_metrics() {
+  return metrics_.Add();
+}
+inline ::TSCached::Metrics* Point::add_metrics() {
+  // @@protoc_insertion_point(field_add:TSCached.Point.metrics)
+  return _internal_add_metrics();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics >&
+Point::metrics() const {
+  // @@protoc_insertion_point(field_list:TSCached.Point.metrics)
+  return metrics_;
 }
 
 // -------------------------------------------------------------------
@@ -1596,304 +1750,9 @@ inline void QueryRequest::set_endtime(::PROTOBUF_NAMESPACE_ID::int64 value) {
 
 // -------------------------------------------------------------------
 
-// WriteRequest
-
-// string dataBase = 1;
-inline void WriteRequest::clear_database() {
-  database_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline const std::string& WriteRequest::database() const {
-  // @@protoc_insertion_point(field_get:TSCached.WriteRequest.dataBase)
-  return _internal_database();
-}
-inline void WriteRequest::set_database(const std::string& value) {
-  _internal_set_database(value);
-  // @@protoc_insertion_point(field_set:TSCached.WriteRequest.dataBase)
-}
-inline std::string* WriteRequest::mutable_database() {
-  // @@protoc_insertion_point(field_mutable:TSCached.WriteRequest.dataBase)
-  return _internal_mutable_database();
-}
-inline const std::string& WriteRequest::_internal_database() const {
-  return database_.GetNoArena();
-}
-inline void WriteRequest::_internal_set_database(const std::string& value) {
-  
-  database_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-}
-inline void WriteRequest::set_database(std::string&& value) {
-  
-  database_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:TSCached.WriteRequest.dataBase)
-}
-inline void WriteRequest::set_database(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  database_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:TSCached.WriteRequest.dataBase)
-}
-inline void WriteRequest::set_database(const char* value, size_t size) {
-  
-  database_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:TSCached.WriteRequest.dataBase)
-}
-inline std::string* WriteRequest::_internal_mutable_database() {
-  
-  return database_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* WriteRequest::release_database() {
-  // @@protoc_insertion_point(field_release:TSCached.WriteRequest.dataBase)
-  
-  return database_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void WriteRequest::set_allocated_database(std::string* database) {
-  if (database != nullptr) {
-    
-  } else {
-    
-  }
-  database_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), database);
-  // @@protoc_insertion_point(field_set_allocated:TSCached.WriteRequest.dataBase)
-}
-
-// string tableName = 2;
-inline void WriteRequest::clear_tablename() {
-  tablename_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline const std::string& WriteRequest::tablename() const {
-  // @@protoc_insertion_point(field_get:TSCached.WriteRequest.tableName)
-  return _internal_tablename();
-}
-inline void WriteRequest::set_tablename(const std::string& value) {
-  _internal_set_tablename(value);
-  // @@protoc_insertion_point(field_set:TSCached.WriteRequest.tableName)
-}
-inline std::string* WriteRequest::mutable_tablename() {
-  // @@protoc_insertion_point(field_mutable:TSCached.WriteRequest.tableName)
-  return _internal_mutable_tablename();
-}
-inline const std::string& WriteRequest::_internal_tablename() const {
-  return tablename_.GetNoArena();
-}
-inline void WriteRequest::_internal_set_tablename(const std::string& value) {
-  
-  tablename_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-}
-inline void WriteRequest::set_tablename(std::string&& value) {
-  
-  tablename_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:TSCached.WriteRequest.tableName)
-}
-inline void WriteRequest::set_tablename(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  tablename_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:TSCached.WriteRequest.tableName)
-}
-inline void WriteRequest::set_tablename(const char* value, size_t size) {
-  
-  tablename_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:TSCached.WriteRequest.tableName)
-}
-inline std::string* WriteRequest::_internal_mutable_tablename() {
-  
-  return tablename_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* WriteRequest::release_tablename() {
-  // @@protoc_insertion_point(field_release:TSCached.WriteRequest.tableName)
-  
-  return tablename_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void WriteRequest::set_allocated_tablename(std::string* tablename) {
-  if (tablename != nullptr) {
-    
-  } else {
-    
-  }
-  tablename_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), tablename);
-  // @@protoc_insertion_point(field_set_allocated:TSCached.WriteRequest.tableName)
-}
-
-// map<string, string> tags = 3;
-inline int WriteRequest::_internal_tags_size() const {
-  return tags_.size();
-}
-inline int WriteRequest::tags_size() const {
-  return _internal_tags_size();
-}
-inline void WriteRequest::clear_tags() {
-  tags_.Clear();
-}
-inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
-WriteRequest::_internal_tags() const {
-  return tags_.GetMap();
-}
-inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
-WriteRequest::tags() const {
-  // @@protoc_insertion_point(field_map:TSCached.WriteRequest.tags)
-  return _internal_tags();
-}
-inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
-WriteRequest::_internal_mutable_tags() {
-  return tags_.MutableMap();
-}
-inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
-WriteRequest::mutable_tags() {
-  // @@protoc_insertion_point(field_mutable_map:TSCached.WriteRequest.tags)
-  return _internal_mutable_tags();
-}
-
-// .TSCached.Points points = 4;
-inline bool WriteRequest::_internal_has_points() const {
-  return this != internal_default_instance() && points_ != nullptr;
-}
-inline bool WriteRequest::has_points() const {
-  return _internal_has_points();
-}
-inline void WriteRequest::clear_points() {
-  if (GetArenaNoVirtual() == nullptr && points_ != nullptr) {
-    delete points_;
-  }
-  points_ = nullptr;
-}
-inline const ::TSCached::Points& WriteRequest::_internal_points() const {
-  const ::TSCached::Points* p = points_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::TSCached::Points*>(
-      &::TSCached::_Points_default_instance_);
-}
-inline const ::TSCached::Points& WriteRequest::points() const {
-  // @@protoc_insertion_point(field_get:TSCached.WriteRequest.points)
-  return _internal_points();
-}
-inline ::TSCached::Points* WriteRequest::release_points() {
-  // @@protoc_insertion_point(field_release:TSCached.WriteRequest.points)
-  
-  ::TSCached::Points* temp = points_;
-  points_ = nullptr;
-  return temp;
-}
-inline ::TSCached::Points* WriteRequest::_internal_mutable_points() {
-  
-  if (points_ == nullptr) {
-    auto* p = CreateMaybeMessage<::TSCached::Points>(GetArenaNoVirtual());
-    points_ = p;
-  }
-  return points_;
-}
-inline ::TSCached::Points* WriteRequest::mutable_points() {
-  // @@protoc_insertion_point(field_mutable:TSCached.WriteRequest.points)
-  return _internal_mutable_points();
-}
-inline void WriteRequest::set_allocated_points(::TSCached::Points* points) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete points_;
-  }
-  if (points) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      points = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, points, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  points_ = points;
-  // @@protoc_insertion_point(field_set_allocated:TSCached.WriteRequest.points)
-}
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // QueryResponse
 
-// string message = 1;
-inline void QueryResponse::clear_message() {
-  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline const std::string& QueryResponse::message() const {
-  // @@protoc_insertion_point(field_get:TSCached.QueryResponse.message)
-  return _internal_message();
-}
-inline void QueryResponse::set_message(const std::string& value) {
-  _internal_set_message(value);
-  // @@protoc_insertion_point(field_set:TSCached.QueryResponse.message)
-}
-inline std::string* QueryResponse::mutable_message() {
-  // @@protoc_insertion_point(field_mutable:TSCached.QueryResponse.message)
-  return _internal_mutable_message();
-}
-inline const std::string& QueryResponse::_internal_message() const {
-  return message_.GetNoArena();
-}
-inline void QueryResponse::_internal_set_message(const std::string& value) {
-  
-  message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-}
-inline void QueryResponse::set_message(std::string&& value) {
-  
-  message_.SetNoArena(
-    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:TSCached.QueryResponse.message)
-}
-inline void QueryResponse::set_message(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:TSCached.QueryResponse.message)
-}
-inline void QueryResponse::set_message(const char* value, size_t size) {
-  
-  message_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:TSCached.QueryResponse.message)
-}
-inline std::string* QueryResponse::_internal_mutable_message() {
-  
-  return message_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline std::string* QueryResponse::release_message() {
-  // @@protoc_insertion_point(field_release:TSCached.QueryResponse.message)
-  
-  return message_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-inline void QueryResponse::set_allocated_message(std::string* message) {
-  if (message != nullptr) {
-    
-  } else {
-    
-  }
-  message_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), message);
-  // @@protoc_insertion_point(field_set_allocated:TSCached.QueryResponse.message)
-}
-
-// int32 statusCode = 2;
-inline void QueryResponse::clear_statuscode() {
-  statuscode_ = 0;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 QueryResponse::_internal_statuscode() const {
-  return statuscode_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 QueryResponse::statuscode() const {
-  // @@protoc_insertion_point(field_get:TSCached.QueryResponse.statusCode)
-  return _internal_statuscode();
-}
-inline void QueryResponse::_internal_set_statuscode(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  
-  statuscode_ = value;
-}
-inline void QueryResponse::set_statuscode(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_statuscode(value);
-  // @@protoc_insertion_point(field_set:TSCached.QueryResponse.statusCode)
-}
-
-// string dataBase = 3;
+// string dataBase = 1;
 inline void QueryResponse::clear_database() {
   database_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -1953,7 +1812,7 @@ inline void QueryResponse::set_allocated_database(std::string* database) {
   // @@protoc_insertion_point(field_set_allocated:TSCached.QueryResponse.dataBase)
 }
 
-// string tableName = 4;
+// string tableName = 2;
 inline void QueryResponse::clear_tablename() {
   tablename_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -2013,7 +1872,7 @@ inline void QueryResponse::set_allocated_tablename(std::string* tablename) {
   // @@protoc_insertion_point(field_set_allocated:TSCached.QueryResponse.tableName)
 }
 
-// map<string, string> tags = 5;
+// map<string, string> tags = 3;
 inline int QueryResponse::_internal_tags_size() const {
   return tags_.size();
 }
@@ -2042,64 +1901,86 @@ QueryResponse::mutable_tags() {
   return _internal_mutable_tags();
 }
 
-// .TSCached.Points points = 6;
-inline bool QueryResponse::_internal_has_points() const {
-  return this != internal_default_instance() && points_ != nullptr;
+// repeated .TSCached.Metrics metrics = 4;
+inline int QueryResponse::_internal_metrics_size() const {
+  return metrics_.size();
 }
-inline bool QueryResponse::has_points() const {
-  return _internal_has_points();
+inline int QueryResponse::metrics_size() const {
+  return _internal_metrics_size();
 }
-inline void QueryResponse::clear_points() {
-  if (GetArenaNoVirtual() == nullptr && points_ != nullptr) {
-    delete points_;
-  }
-  points_ = nullptr;
+inline void QueryResponse::clear_metrics() {
+  metrics_.Clear();
 }
-inline const ::TSCached::Points& QueryResponse::_internal_points() const {
-  const ::TSCached::Points* p = points_;
-  return p != nullptr ? *p : *reinterpret_cast<const ::TSCached::Points*>(
-      &::TSCached::_Points_default_instance_);
+inline ::TSCached::Metrics* QueryResponse::mutable_metrics(int index) {
+  // @@protoc_insertion_point(field_mutable:TSCached.QueryResponse.metrics)
+  return metrics_.Mutable(index);
 }
-inline const ::TSCached::Points& QueryResponse::points() const {
-  // @@protoc_insertion_point(field_get:TSCached.QueryResponse.points)
-  return _internal_points();
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics >*
+QueryResponse::mutable_metrics() {
+  // @@protoc_insertion_point(field_mutable_list:TSCached.QueryResponse.metrics)
+  return &metrics_;
 }
-inline ::TSCached::Points* QueryResponse::release_points() {
-  // @@protoc_insertion_point(field_release:TSCached.QueryResponse.points)
-  
-  ::TSCached::Points* temp = points_;
-  points_ = nullptr;
-  return temp;
+inline const ::TSCached::Metrics& QueryResponse::_internal_metrics(int index) const {
+  return metrics_.Get(index);
 }
-inline ::TSCached::Points* QueryResponse::_internal_mutable_points() {
-  
-  if (points_ == nullptr) {
-    auto* p = CreateMaybeMessage<::TSCached::Points>(GetArenaNoVirtual());
-    points_ = p;
-  }
+inline const ::TSCached::Metrics& QueryResponse::metrics(int index) const {
+  // @@protoc_insertion_point(field_get:TSCached.QueryResponse.metrics)
+  return _internal_metrics(index);
+}
+inline ::TSCached::Metrics* QueryResponse::_internal_add_metrics() {
+  return metrics_.Add();
+}
+inline ::TSCached::Metrics* QueryResponse::add_metrics() {
+  // @@protoc_insertion_point(field_add:TSCached.QueryResponse.metrics)
+  return _internal_add_metrics();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Metrics >&
+QueryResponse::metrics() const {
+  // @@protoc_insertion_point(field_list:TSCached.QueryResponse.metrics)
+  return metrics_;
+}
+
+// -------------------------------------------------------------------
+
+// WriteRequest
+
+// repeated .TSCached.Point points = 1;
+inline int WriteRequest::_internal_points_size() const {
+  return points_.size();
+}
+inline int WriteRequest::points_size() const {
+  return _internal_points_size();
+}
+inline void WriteRequest::clear_points() {
+  points_.Clear();
+}
+inline ::TSCached::Point* WriteRequest::mutable_points(int index) {
+  // @@protoc_insertion_point(field_mutable:TSCached.WriteRequest.points)
+  return points_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Point >*
+WriteRequest::mutable_points() {
+  // @@protoc_insertion_point(field_mutable_list:TSCached.WriteRequest.points)
+  return &points_;
+}
+inline const ::TSCached::Point& WriteRequest::_internal_points(int index) const {
+  return points_.Get(index);
+}
+inline const ::TSCached::Point& WriteRequest::points(int index) const {
+  // @@protoc_insertion_point(field_get:TSCached.WriteRequest.points)
+  return _internal_points(index);
+}
+inline ::TSCached::Point* WriteRequest::_internal_add_points() {
+  return points_.Add();
+}
+inline ::TSCached::Point* WriteRequest::add_points() {
+  // @@protoc_insertion_point(field_add:TSCached.WriteRequest.points)
+  return _internal_add_points();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::TSCached::Point >&
+WriteRequest::points() const {
+  // @@protoc_insertion_point(field_list:TSCached.WriteRequest.points)
   return points_;
-}
-inline ::TSCached::Points* QueryResponse::mutable_points() {
-  // @@protoc_insertion_point(field_mutable:TSCached.QueryResponse.points)
-  return _internal_mutable_points();
-}
-inline void QueryResponse::set_allocated_points(::TSCached::Points* points) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete points_;
-  }
-  if (points) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      points = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, points, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  points_ = points;
-  // @@protoc_insertion_point(field_set_allocated:TSCached.QueryResponse.points)
 }
 
 // -------------------------------------------------------------------
@@ -2166,22 +2047,22 @@ inline void WriteResponse::set_allocated_message(std::string* message) {
   // @@protoc_insertion_point(field_set_allocated:TSCached.WriteResponse.message)
 }
 
-// int32 statusCode = 2;
+// .TSCached.StatusCode statusCode = 2;
 inline void WriteResponse::clear_statuscode() {
   statuscode_ = 0;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 WriteResponse::_internal_statuscode() const {
-  return statuscode_;
+inline ::TSCached::StatusCode WriteResponse::_internal_statuscode() const {
+  return static_cast< ::TSCached::StatusCode >(statuscode_);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 WriteResponse::statuscode() const {
+inline ::TSCached::StatusCode WriteResponse::statuscode() const {
   // @@protoc_insertion_point(field_get:TSCached.WriteResponse.statusCode)
   return _internal_statuscode();
 }
-inline void WriteResponse::_internal_set_statuscode(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void WriteResponse::_internal_set_statuscode(::TSCached::StatusCode value) {
   
   statuscode_ = value;
 }
-inline void WriteResponse::set_statuscode(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void WriteResponse::set_statuscode(::TSCached::StatusCode value) {
   _internal_set_statuscode(value);
   // @@protoc_insertion_point(field_set:TSCached.WriteResponse.statusCode)
 }
@@ -2211,6 +2092,16 @@ inline void WriteResponse::set_statuscode(::PROTOBUF_NAMESPACE_ID::int32 value) 
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace TSCached
+
+PROTOBUF_NAMESPACE_OPEN
+
+template <> struct is_proto_enum< ::TSCached::StatusCode> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::TSCached::StatusCode>() {
+  return ::TSCached::StatusCode_descriptor();
+}
+
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 

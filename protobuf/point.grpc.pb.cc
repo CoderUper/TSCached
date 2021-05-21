@@ -23,7 +23,7 @@ namespace TSCached {
 
 static const char* TSCachedService_method_names[] = {
   "/TSCached.TSCachedService/QueryPoints",
-  "/TSCached.TSCachedService/InsertPoints",
+  "/TSCached.TSCachedService/WritePoints",
 };
 
 std::unique_ptr< TSCachedService::Stub> TSCachedService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -34,7 +34,7 @@ std::unique_ptr< TSCachedService::Stub> TSCachedService::NewStub(const std::shar
 
 TSCachedService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   : channel_(channel), rpcmethod_QueryPoints_(TSCachedService_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_InsertPoints_(TSCachedService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_WritePoints_(TSCachedService_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status TSCachedService::Stub::QueryPoints(::grpc::ClientContext* context, const ::TSCached::QueryRequest& request, ::TSCached::QueryResponse* response) {
@@ -65,32 +65,32 @@ void TSCachedService::Stub::experimental_async::QueryPoints(::grpc::ClientContex
   return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::TSCached::QueryResponse>::Create(channel_.get(), cq, rpcmethod_QueryPoints_, context, request, false);
 }
 
-::grpc::Status TSCachedService::Stub::InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::TSCached::WriteResponse* response) {
-  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_InsertPoints_, context, request, response);
+::grpc::Status TSCachedService::Stub::WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::TSCached::WriteResponse* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_WritePoints_, context, request, response);
 }
 
-void TSCachedService::Stub::experimental_async::InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_InsertPoints_, context, request, response, std::move(f));
+void TSCachedService::Stub::experimental_async::WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_WritePoints_, context, request, response, std::move(f));
 }
 
-void TSCachedService::Stub::experimental_async::InsertPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)> f) {
-  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_InsertPoints_, context, request, response, std::move(f));
+void TSCachedService::Stub::experimental_async::WritePoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, std::function<void(::grpc::Status)> f) {
+  ::grpc_impl::internal::CallbackUnaryCall(stub_->channel_.get(), stub_->rpcmethod_WritePoints_, context, request, response, std::move(f));
 }
 
-void TSCachedService::Stub::experimental_async::InsertPoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
-  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_InsertPoints_, context, request, response, reactor);
+void TSCachedService::Stub::experimental_async::WritePoints(::grpc::ClientContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_WritePoints_, context, request, response, reactor);
 }
 
-void TSCachedService::Stub::experimental_async::InsertPoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
-  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_InsertPoints_, context, request, response, reactor);
+void TSCachedService::Stub::experimental_async::WritePoints(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::TSCached::WriteResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) {
+  ::grpc_impl::internal::ClientCallbackUnaryFactory::Create(stub_->channel_.get(), stub_->rpcmethod_WritePoints_, context, request, response, reactor);
 }
 
-::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>* TSCachedService::Stub::AsyncInsertPointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::TSCached::WriteResponse>::Create(channel_.get(), cq, rpcmethod_InsertPoints_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>* TSCachedService::Stub::AsyncWritePointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::TSCached::WriteResponse>::Create(channel_.get(), cq, rpcmethod_WritePoints_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>* TSCachedService::Stub::PrepareAsyncInsertPointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::TSCached::WriteResponse>::Create(channel_.get(), cq, rpcmethod_InsertPoints_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::TSCached::WriteResponse>* TSCachedService::Stub::PrepareAsyncWritePointsRaw(::grpc::ClientContext* context, const ::TSCached::WriteRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc_impl::internal::ClientAsyncResponseReaderFactory< ::TSCached::WriteResponse>::Create(channel_.get(), cq, rpcmethod_WritePoints_, context, request, false);
 }
 
 TSCachedService::Service::Service() {
@@ -103,7 +103,7 @@ TSCachedService::Service::Service() {
       TSCachedService_method_names[1],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< TSCachedService::Service, ::TSCached::WriteRequest, ::TSCached::WriteResponse>(
-          std::mem_fn(&TSCachedService::Service::InsertPoints), this)));
+          std::mem_fn(&TSCachedService::Service::WritePoints), this)));
 }
 
 TSCachedService::Service::~Service() {
@@ -116,7 +116,7 @@ TSCachedService::Service::~Service() {
   return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
 }
 
-::grpc::Status TSCachedService::Service::InsertPoints(::grpc::ServerContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response) {
+::grpc::Status TSCachedService::Service::WritePoints(::grpc::ServerContext* context, const ::TSCached::WriteRequest* request, ::TSCached::WriteResponse* response) {
   (void) context;
   (void) request;
   (void) response;

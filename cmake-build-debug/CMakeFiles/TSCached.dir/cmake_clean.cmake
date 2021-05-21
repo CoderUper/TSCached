@@ -1,13 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TSCached.dir/main.cpp.obj"
-  "CMakeFiles/TSCached.dir/storage/block.cpp.obj"
-  "CMakeFiles/TSCached.dir/storage/point.cpp.obj"
-  "CMakeFiles/TSCached.dir/storage/ts.cpp.obj"
-  "CMakeFiles/TSCached.dir/storage/tsmap.cpp.obj"
-  "TSCached.exe"
-  "TSCached.exe.manifest"
+  "CMakeFiles/TSCached.dir/main.cpp.o"
+  "CMakeFiles/TSCached.dir/protobuf/point.grpc.pb.cc.o"
+  "CMakeFiles/TSCached.dir/protobuf/point.pb.cc.o"
+  "CMakeFiles/TSCached.dir/server/TSCachedServiceImpl.cpp.o"
+  "CMakeFiles/TSCached.dir/storage/block.cpp.o"
+  "CMakeFiles/TSCached.dir/storage/point.cpp.o"
+  "CMakeFiles/TSCached.dir/storage/ts.cpp.o"
+  "CMakeFiles/TSCached.dir/storage/tsmap.cpp.o"
+  "TSCached"
   "TSCached.pdb"
-  "libTSCached.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

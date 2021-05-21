@@ -4,15 +4,17 @@ package TSCached;
 
 
 //一行数据
-message Field{
-  int64 timestamp = 2;
-  map<string,double> fields=1;
+message Metrics{
+  int64 timeStamp = 1;
+  map<string,double> fields=2;
+}
+message Point{
+  string dataBase = 1;
+  string tableName = 2;
+  map<string,string> tags = 3;
+  repeated Metrics metrics = 4;
 }
 
-//Points对象用于存储多行数据
-message Points{
-  repeated Field fields = 4;
-}
 
 message QueryRequest {
   string dataBase = 1;
@@ -22,28 +24,30 @@ message QueryRequest {
   int64 endTime = 5;     //结束时间
 }
 
-message WriteRequest{
+message QueryResponse {
   string dataBase = 1;
   string tableName = 2;
   map<string,string> tags = 3;
-  Points points = 4;
+  repeated Metrics metrics = 4;
 }
 
-message QueryResponse {
-  string message = 1;     //返回消息
-  int32 statusCode = 2;   //状态码
-  string dataBase = 3;
-  string tableName = 4;
-  map<string,string> tags = 5;
-  Points points = 6;
+
+message WriteRequest{
+  repeated Point points = 1;
 }
+
+enum StatusCode {
+  OK = 0;
+  ERROR = 1;
+}
+
 message WriteResponse {
   string message = 1;
-  int32 statusCode = 2;
+  StatusCode statusCode = 2;
 }
 
 service TSCachedService{
   rpc QueryPoints(QueryRequest) returns (QueryResponse) {};
-  rpc InsertPoints(WriteRequest) returns (WriteResponse) {};
+  rpc WritePoints(WriteRequest) returns (WriteResponse) {};
 }
 

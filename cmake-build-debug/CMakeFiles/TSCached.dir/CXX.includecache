@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-E:/Clion/TSCached/main.cpp
+/mnt/e/Clion/TSCached/main.cpp
 storage/tsmap.h
-E:/Clion/TSCached/storage/tsmap.h
+/mnt/e/Clion/TSCached/storage/tsmap.h
 map
 -
 
-E:/Clion/TSCached/storage/block.cpp
+/mnt/e/Clion/TSCached/storage/block.cpp
 block.h
-E:/Clion/TSCached/storage/block.h
+/mnt/e/Clion/TSCached/storage/block.h
 
-E:/Clion/TSCached/storage/block.h
+/mnt/e/Clion/TSCached/storage/block.h
 point.h
-E:/Clion/TSCached/storage/point.h
+/mnt/e/Clion/TSCached/storage/point.h
 list
 -
 vector
@@ -30,15 +30,15 @@ memory
 cassert
 -
 
-E:/Clion/TSCached/storage/point.cpp
+/mnt/e/Clion/TSCached/storage/point.cpp
 point.h
-E:/Clion/TSCached/storage/point.h
+/mnt/e/Clion/TSCached/storage/point.h
 cassert
 -
 iostream
 -
 
-E:/Clion/TSCached/storage/point.h
+/mnt/e/Clion/TSCached/storage/point.h
 string
 -
 vector
@@ -50,25 +50,25 @@ list
 ctime
 -
 
-E:/Clion/TSCached/storage/ts.cpp
+/mnt/e/Clion/TSCached/storage/ts.cpp
 ts.h
-E:/Clion/TSCached/storage/ts.h
+/mnt/e/Clion/TSCached/storage/ts.h
 utility
 -
 
-E:/Clion/TSCached/storage/ts.h
+/mnt/e/Clion/TSCached/storage/ts.h
 block.h
-E:/Clion/TSCached/storage/block.h
+/mnt/e/Clion/TSCached/storage/block.h
 cassert
 -
 
-E:/Clion/TSCached/storage/tsmap.cpp
+/mnt/e/Clion/TSCached/storage/tsmap.cpp
 tsmap.h
-E:/Clion/TSCached/storage/tsmap.h
+/mnt/e/Clion/TSCached/storage/tsmap.h
 
-E:/Clion/TSCached/storage/tsmap.h
+/mnt/e/Clion/TSCached/storage/tsmap.h
 ts.h
-E:/Clion/TSCached/storage/ts.h
+/mnt/e/Clion/TSCached/storage/ts.h
 vector
 -
 unordered_map

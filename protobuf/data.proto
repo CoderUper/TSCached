@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package TSCached;
+
+//数据行
+message Field {
+  map<string,bytes> field = 1;
+  map<string,int32> dataType = 2;
+}
+//带时间戳的单点数据
+message FieldWithTime{
+  int64 timeStamp = 1;
+  map<string,bytes> field = 2;
+  map<string,int32> dataType = 3;
+}
+//单个点
+message Point{
+  string dataName = 1;
+  string tableName = 2;
+  map<string,string> tags = 3;
+  int64 timeStamp = 4;
+  Field field = 5;
+}
+//多个点
+message Points{
+  string dataName = 1;
+  string tableName = 2;
+  map<string,string> tags = 3;
+  repeated FieldWithTime points = 4;
+}
+
+message QueryRequest{
+  string dataName = 1;
+  string tableName = 2;
+  map<string,string> tags = 3;
+  int64 startTime = 4;
+  int64 endTime = 5;
+}
+message QueryResponse{
+  string msg = 1;  //消息
+  int32 code = 2;   //返回状态码；0.成功；1.失败
+  string dataName = 3;
+  string tableName = 4;
+  map<string,string> tags = 5;
+  repeated FieldWithTime points = 6;
+
+}
+
+message WriteResponse {
+  string msg = 1;
+  int32 code = 2;    //0.成功；1.失败
+}
+
+service TSCachedService {
+  rpc Query(QueryRequest) returns (QueryResponse) {}
+  rpc Write(Point) returns (WriteResponse) {}
+  rpc WriteBatch(Points) returns (WriteResponse) {}
+}

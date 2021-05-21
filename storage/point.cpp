@@ -129,7 +129,7 @@ void QueryPoints::Print() const {
     }
 }
 
-QueryPoints::QueryPoints(std::string &db, std::string &tn, std::map<std::string, std::string> &tags)
+QueryPoints::QueryPoints(const std::string &db, const std::string &tn,const std::map<std::string, std::string> &tags)
 :DataBase(db),TableName(tn),Tags(tags)
 {
 

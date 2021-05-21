@@ -1,4 +1,4 @@
-ToolSet: w64 6.0 (local)@D:\mingw64
+ToolSet: Ubuntu 18.04.2 LTS (local)@C:\Users\金祝光\AppData\Local\Microsoft\WindowsApps\ubuntu1804.exe
 Options: 
 
 Options:

@@ -37,7 +37,7 @@ public:
     time_t start_;   //开始时间
     time_t end_;     //结束时间
 public:
-    QueryPoints(std::string& db,std::string& tn,std::map<std::string,std::string>& tags);
+    QueryPoints(const std::string& db,const std::string& tn,const std::map<std::string,std::string>& tags);
     explicit QueryPoints(Point&);
     std::string GetKey();
     void Insert(Field& field);

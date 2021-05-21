@@ -14,25 +14,29 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Field_point_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Field_FieldsEntry_DoNotUse_point_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Points_point_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Metrics_point_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Metrics_FieldsEntry_DoNotUse_point_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Point_point_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Point_TagsEntry_DoNotUse_point_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_QueryRequest_TagsEntry_DoNotUse_point_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_QueryResponse_TagsEntry_DoNotUse_point_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_point_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_WriteRequest_TagsEntry_DoNotUse_point_2eproto;
 namespace TSCached {
-class Field_FieldsEntry_DoNotUseDefaultTypeInternal {
+class Metrics_FieldsEntry_DoNotUseDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Field_FieldsEntry_DoNotUse> _instance;
-} _Field_FieldsEntry_DoNotUse_default_instance_;
-class FieldDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Metrics_FieldsEntry_DoNotUse> _instance;
+} _Metrics_FieldsEntry_DoNotUse_default_instance_;
+class MetricsDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Field> _instance;
-} _Field_default_instance_;
-class PointsDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Metrics> _instance;
+} _Metrics_default_instance_;
+class Point_TagsEntry_DoNotUseDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Points> _instance;
-} _Points_default_instance_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Point_TagsEntry_DoNotUse> _instance;
+} _Point_TagsEntry_DoNotUse_default_instance_;
+class PointDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Point> _instance;
+} _Point_default_instance_;
 class QueryRequest_TagsEntry_DoNotUseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<QueryRequest_TagsEntry_DoNotUse> _instance;
@@ -41,14 +45,6 @@ class QueryRequestDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<QueryRequest> _instance;
 } _QueryRequest_default_instance_;
-class WriteRequest_TagsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<WriteRequest_TagsEntry_DoNotUse> _instance;
-} _WriteRequest_TagsEntry_DoNotUse_default_instance_;
-class WriteRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<WriteRequest> _instance;
-} _WriteRequest_default_instance_;
 class QueryResponse_TagsEntry_DoNotUseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<QueryResponse_TagsEntry_DoNotUse> _instance;
@@ -57,53 +53,71 @@ class QueryResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<QueryResponse> _instance;
 } _QueryResponse_default_instance_;
+class WriteRequestDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<WriteRequest> _instance;
+} _WriteRequest_default_instance_;
 class WriteResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<WriteResponse> _instance;
 } _WriteResponse_default_instance_;
 }  // namespace TSCached
-static void InitDefaultsscc_info_Field_point_2eproto() {
+static void InitDefaultsscc_info_Metrics_point_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::TSCached::_Field_default_instance_;
-    new (ptr) ::TSCached::Field();
+    void* ptr = &::TSCached::_Metrics_default_instance_;
+    new (ptr) ::TSCached::Metrics();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::TSCached::Field::InitAsDefaultInstance();
+  ::TSCached::Metrics::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Field_point_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Field_point_2eproto}, {
-      &scc_info_Field_FieldsEntry_DoNotUse_point_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Metrics_point_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Metrics_point_2eproto}, {
+      &scc_info_Metrics_FieldsEntry_DoNotUse_point_2eproto.base,}};
 
-static void InitDefaultsscc_info_Field_FieldsEntry_DoNotUse_point_2eproto() {
+static void InitDefaultsscc_info_Metrics_FieldsEntry_DoNotUse_point_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::TSCached::_Field_FieldsEntry_DoNotUse_default_instance_;
-    new (ptr) ::TSCached::Field_FieldsEntry_DoNotUse();
+    void* ptr = &::TSCached::_Metrics_FieldsEntry_DoNotUse_default_instance_;
+    new (ptr) ::TSCached::Metrics_FieldsEntry_DoNotUse();
   }
-  ::TSCached::Field_FieldsEntry_DoNotUse::InitAsDefaultInstance();
+  ::TSCached::Metrics_FieldsEntry_DoNotUse::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Field_FieldsEntry_DoNotUse_point_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Field_FieldsEntry_DoNotUse_point_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Metrics_FieldsEntry_DoNotUse_point_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Metrics_FieldsEntry_DoNotUse_point_2eproto}, {}};
 
-static void InitDefaultsscc_info_Points_point_2eproto() {
+static void InitDefaultsscc_info_Point_point_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::TSCached::_Points_default_instance_;
-    new (ptr) ::TSCached::Points();
+    void* ptr = &::TSCached::_Point_default_instance_;
+    new (ptr) ::TSCached::Point();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::TSCached::Points::InitAsDefaultInstance();
+  ::TSCached::Point::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Points_point_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Points_point_2eproto}, {
-      &scc_info_Field_point_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Point_point_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_Point_point_2eproto}, {
+      &scc_info_Point_TagsEntry_DoNotUse_point_2eproto.base,
+      &scc_info_Metrics_point_2eproto.base,}};
+
+static void InitDefaultsscc_info_Point_TagsEntry_DoNotUse_point_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::TSCached::_Point_TagsEntry_DoNotUse_default_instance_;
+    new (ptr) ::TSCached::Point_TagsEntry_DoNotUse();
+  }
+  ::TSCached::Point_TagsEntry_DoNotUse::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Point_TagsEntry_DoNotUse_point_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Point_TagsEntry_DoNotUse_point_2eproto}, {}};
 
 static void InitDefaultsscc_info_QueryRequest_point_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -147,7 +161,7 @@ static void InitDefaultsscc_info_QueryResponse_point_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_QueryResponse_point_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_QueryResponse_point_2eproto}, {
       &scc_info_QueryResponse_TagsEntry_DoNotUse_point_2eproto.base,
-      &scc_info_Points_point_2eproto.base,}};
+      &scc_info_Metrics_point_2eproto.base,}};
 
 static void InitDefaultsscc_info_QueryResponse_TagsEntry_DoNotUse_point_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -173,23 +187,9 @@ static void InitDefaultsscc_info_WriteRequest_point_2eproto() {
   ::TSCached::WriteRequest::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_WriteRequest_point_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_WriteRequest_point_2eproto}, {
-      &scc_info_WriteRequest_TagsEntry_DoNotUse_point_2eproto.base,
-      &scc_info_Points_point_2eproto.base,}};
-
-static void InitDefaultsscc_info_WriteRequest_TagsEntry_DoNotUse_point_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::TSCached::_WriteRequest_TagsEntry_DoNotUse_default_instance_;
-    new (ptr) ::TSCached::WriteRequest_TagsEntry_DoNotUse();
-  }
-  ::TSCached::WriteRequest_TagsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_WriteRequest_TagsEntry_DoNotUse_point_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_WriteRequest_TagsEntry_DoNotUse_point_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_WriteRequest_point_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_WriteRequest_point_2eproto}, {
+      &scc_info_Point_point_2eproto.base,}};
 
 static void InitDefaultsscc_info_WriteResponse_point_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -206,32 +206,44 @@ static void InitDefaultsscc_info_WriteResponse_point_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_WriteResponse_point_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_point_2eproto[10];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_point_2eproto = nullptr;
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_point_2eproto[1];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_point_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_point_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::TSCached::Field_FieldsEntry_DoNotUse, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::Field_FieldsEntry_DoNotUse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Metrics_FieldsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Metrics_FieldsEntry_DoNotUse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::TSCached::Field_FieldsEntry_DoNotUse, key_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::Field_FieldsEntry_DoNotUse, value_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Metrics_FieldsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Metrics_FieldsEntry_DoNotUse, value_),
   0,
   1,
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::TSCached::Field, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Metrics, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::TSCached::Field, timestamp_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::Field, fields_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Metrics, timestamp_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Metrics, fields_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Point_TagsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Point_TagsEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::TSCached::Point_TagsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Point_TagsEntry_DoNotUse, value_),
+  0,
+  1,
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::TSCached::Points, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Point, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::TSCached::Points, fields_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Point, database_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Point, tablename_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Point, tags_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::Point, metrics_),
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryRequest_TagsEntry_DoNotUse, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryRequest_TagsEntry_DoNotUse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -251,24 +263,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_point_2eproto::offsets[] PROTO
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryRequest, tags_),
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryRequest, starttime_),
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryRequest, endtime_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest_TagsEntry_DoNotUse, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest_TagsEntry_DoNotUse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest_TagsEntry_DoNotUse, key_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest_TagsEntry_DoNotUse, value_),
-  0,
-  1,
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest, database_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest, tablename_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest, tags_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest, points_),
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryResponse_TagsEntry_DoNotUse, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryResponse_TagsEntry_DoNotUse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -283,12 +277,16 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_point_2eproto::offsets[] PROTO
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::TSCached::QueryResponse, message_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::QueryResponse, statuscode_),
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryResponse, database_),
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryResponse, tablename_),
   PROTOBUF_FIELD_OFFSET(::TSCached::QueryResponse, tags_),
-  PROTOBUF_FIELD_OFFSET(::TSCached::QueryResponse, points_),
+  PROTOBUF_FIELD_OFFSET(::TSCached::QueryResponse, metrics_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::TSCached::WriteRequest, points_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::TSCached::WriteResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -298,76 +296,77 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_point_2eproto::offsets[] PROTO
   PROTOBUF_FIELD_OFFSET(::TSCached::WriteResponse, statuscode_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 7, sizeof(::TSCached::Field_FieldsEntry_DoNotUse)},
-  { 9, -1, sizeof(::TSCached::Field)},
-  { 16, -1, sizeof(::TSCached::Points)},
-  { 22, 29, sizeof(::TSCached::QueryRequest_TagsEntry_DoNotUse)},
-  { 31, -1, sizeof(::TSCached::QueryRequest)},
-  { 41, 48, sizeof(::TSCached::WriteRequest_TagsEntry_DoNotUse)},
-  { 50, -1, sizeof(::TSCached::WriteRequest)},
-  { 59, 66, sizeof(::TSCached::QueryResponse_TagsEntry_DoNotUse)},
-  { 68, -1, sizeof(::TSCached::QueryResponse)},
-  { 79, -1, sizeof(::TSCached::WriteResponse)},
+  { 0, 7, sizeof(::TSCached::Metrics_FieldsEntry_DoNotUse)},
+  { 9, -1, sizeof(::TSCached::Metrics)},
+  { 16, 23, sizeof(::TSCached::Point_TagsEntry_DoNotUse)},
+  { 25, -1, sizeof(::TSCached::Point)},
+  { 34, 41, sizeof(::TSCached::QueryRequest_TagsEntry_DoNotUse)},
+  { 43, -1, sizeof(::TSCached::QueryRequest)},
+  { 53, 60, sizeof(::TSCached::QueryResponse_TagsEntry_DoNotUse)},
+  { 62, -1, sizeof(::TSCached::QueryResponse)},
+  { 71, -1, sizeof(::TSCached::WriteRequest)},
+  { 77, -1, sizeof(::TSCached::WriteResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_Field_FieldsEntry_DoNotUse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_Field_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_Points_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_Metrics_FieldsEntry_DoNotUse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_Metrics_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_Point_TagsEntry_DoNotUse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_Point_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_QueryRequest_TagsEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_QueryRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_WriteRequest_TagsEntry_DoNotUse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_WriteRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_QueryResponse_TagsEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_QueryResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_WriteRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::TSCached::_WriteResponse_default_instance_),
 };
 
 const char descriptor_table_protodef_point_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\013point.proto\022\010TSCached\"v\n\005Field\022\021\n\ttime"
-  "stamp\030\002 \001(\003\022+\n\006fields\030\001 \003(\0132\033.TSCached.F"
-  "ield.FieldsEntry\032-\n\013FieldsEntry\022\013\n\003key\030\001"
-  " \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\")\n\006Points\022\037\n\006fie"
-  "lds\030\004 \003(\0132\017.TSCached.Field\"\264\001\n\014QueryRequ"
-  "est\022\020\n\010dataBase\030\001 \001(\t\022\021\n\ttableName\030\002 \001(\t"
-  "\022.\n\004tags\030\003 \003(\0132 .TSCached.QueryRequest.T"
-  "agsEntry\022\021\n\tstartTime\030\004 \001(\003\022\017\n\007endTime\030\005"
-  " \001(\003\032+\n\tTagsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030"
-  "\002 \001(\t:\0028\001\"\262\001\n\014WriteRequest\022\020\n\010dataBase\030\001"
-  " \001(\t\022\021\n\ttableName\030\002 \001(\t\022.\n\004tags\030\003 \003(\0132 ."
-  "TSCached.WriteRequest.TagsEntry\022 \n\006point"
-  "s\030\004 \001(\0132\020.TSCached.Points\032+\n\tTagsEntry\022\013"
-  "\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\331\001\n\rQuery"
-  "Response\022\017\n\007message\030\001 \001(\t\022\022\n\nstatusCode\030"
-  "\002 \001(\005\022\020\n\010dataBase\030\003 \001(\t\022\021\n\ttableName\030\004 \001"
-  "(\t\022/\n\004tags\030\005 \003(\0132!.TSCached.QueryRespons"
-  "e.TagsEntry\022 \n\006points\030\006 \001(\0132\020.TSCached.P"
-  "oints\032+\n\tTagsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value"
-  "\030\002 \001(\t:\0028\001\"4\n\rWriteResponse\022\017\n\007message\030\001"
-  " \001(\t\022\022\n\nstatusCode\030\002 \001(\0052\226\001\n\017TSCachedSer"
-  "vice\022@\n\013QueryPoints\022\026.TSCached.QueryRequ"
-  "est\032\027.TSCached.QueryResponse\"\000\022A\n\014Insert"
-  "Points\022\026.TSCached.WriteRequest\032\027.TSCache"
-  "d.WriteResponse\"\000b\006proto3"
+  "\n\013point.proto\022\010TSCached\"z\n\007Metrics\022\021\n\tti"
+  "meStamp\030\001 \001(\003\022-\n\006fields\030\002 \003(\0132\035.TSCached"
+  ".Metrics.FieldsEntry\032-\n\013FieldsEntry\022\013\n\003k"
+  "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\001:\0028\001\"\246\001\n\005Point\022\020\n"
+  "\010dataBase\030\001 \001(\t\022\021\n\ttableName\030\002 \001(\t\022\'\n\004ta"
+  "gs\030\003 \003(\0132\031.TSCached.Point.TagsEntry\022\"\n\007m"
+  "etrics\030\004 \003(\0132\021.TSCached.Metrics\032+\n\tTagsE"
+  "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\264\001\n"
+  "\014QueryRequest\022\020\n\010dataBase\030\001 \001(\t\022\021\n\ttable"
+  "Name\030\002 \001(\t\022.\n\004tags\030\003 \003(\0132 .TSCached.Quer"
+  "yRequest.TagsEntry\022\021\n\tstartTime\030\004 \001(\003\022\017\n"
+  "\007endTime\030\005 \001(\003\032+\n\tTagsEntry\022\013\n\003key\030\001 \001(\t"
+  "\022\r\n\005value\030\002 \001(\t:\0028\001\"\266\001\n\rQueryResponse\022\020\n"
+  "\010dataBase\030\001 \001(\t\022\021\n\ttableName\030\002 \001(\t\022/\n\004ta"
+  "gs\030\003 \003(\0132!.TSCached.QueryResponse.TagsEn"
+  "try\022\"\n\007metrics\030\004 \003(\0132\021.TSCached.Metrics\032"
+  "+\n\tTagsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t"
+  ":\0028\001\"/\n\014WriteRequest\022\037\n\006points\030\001 \003(\0132\017.T"
+  "SCached.Point\"J\n\rWriteResponse\022\017\n\007messag"
+  "e\030\001 \001(\t\022(\n\nstatusCode\030\002 \001(\0162\024.TSCached.S"
+  "tatusCode*\037\n\nStatusCode\022\006\n\002OK\020\000\022\t\n\005ERROR"
+  "\020\0012\225\001\n\017TSCachedService\022@\n\013QueryPoints\022\026."
+  "TSCached.QueryRequest\032\027.TSCached.QueryRe"
+  "sponse\"\000\022@\n\013WritePoints\022\026.TSCached.Write"
+  "Request\032\027.TSCached.WriteResponse\"\000b\006prot"
+  "o3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_point_2eproto_deps[1] = {
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_point_2eproto_sccs[10] = {
-  &scc_info_Field_point_2eproto.base,
-  &scc_info_Field_FieldsEntry_DoNotUse_point_2eproto.base,
-  &scc_info_Points_point_2eproto.base,
+  &scc_info_Metrics_point_2eproto.base,
+  &scc_info_Metrics_FieldsEntry_DoNotUse_point_2eproto.base,
+  &scc_info_Point_point_2eproto.base,
+  &scc_info_Point_TagsEntry_DoNotUse_point_2eproto.base,
   &scc_info_QueryRequest_point_2eproto.base,
   &scc_info_QueryRequest_TagsEntry_DoNotUse_point_2eproto.base,
   &scc_info_QueryResponse_point_2eproto.base,
   &scc_info_QueryResponse_TagsEntry_DoNotUse_point_2eproto.base,
   &scc_info_WriteRequest_point_2eproto.base,
-  &scc_info_WriteRequest_TagsEntry_DoNotUse_point_2eproto.base,
   &scc_info_WriteResponse_point_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_point_2eproto_once;
 static bool descriptor_table_point_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_point_2eproto = {
-  &descriptor_table_point_2eproto_initialized, descriptor_table_protodef_point_2eproto, "point.proto", 985,
+  &descriptor_table_point_2eproto_initialized, descriptor_table_protodef_point_2eproto, "point.proto", 1002,
   &descriptor_table_point_2eproto_once, descriptor_table_point_2eproto_sccs, descriptor_table_point_2eproto_deps, 10, 0,
   schemas, file_default_instances, TableStruct_point_2eproto::offsets,
   file_level_metadata_point_2eproto, 10, file_level_enum_descriptors_point_2eproto, file_level_service_descriptors_point_2eproto,
@@ -376,19 +375,33 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_point_
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_point_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_point_2eproto), true);
 namespace TSCached {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* StatusCode_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_point_2eproto);
+  return file_level_enum_descriptors_point_2eproto[0];
+}
+bool StatusCode_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+      return true;
+    default:
+      return false;
+  }
+}
+
 
 // ===================================================================
 
-Field_FieldsEntry_DoNotUse::Field_FieldsEntry_DoNotUse() {}
-Field_FieldsEntry_DoNotUse::Field_FieldsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+Metrics_FieldsEntry_DoNotUse::Metrics_FieldsEntry_DoNotUse() {}
+Metrics_FieldsEntry_DoNotUse::Metrics_FieldsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
     : SuperType(arena) {}
-void Field_FieldsEntry_DoNotUse::MergeFrom(const Field_FieldsEntry_DoNotUse& other) {
+void Metrics_FieldsEntry_DoNotUse::MergeFrom(const Metrics_FieldsEntry_DoNotUse& other) {
   MergeFromInternal(other);
 }
-::PROTOBUF_NAMESPACE_ID::Metadata Field_FieldsEntry_DoNotUse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Metrics_FieldsEntry_DoNotUse::GetMetadata() const {
   return GetMetadataStatic();
 }
-void Field_FieldsEntry_DoNotUse::MergeFrom(
+void Metrics_FieldsEntry_DoNotUse::MergeFrom(
     const ::PROTOBUF_NAMESPACE_ID::Message& other) {
   ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
 }
@@ -396,50 +409,50 @@ void Field_FieldsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void Field::InitAsDefaultInstance() {
+void Metrics::InitAsDefaultInstance() {
 }
-class Field::_Internal {
+class Metrics::_Internal {
  public:
 };
 
-Field::Field()
+Metrics::Metrics()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:TSCached.Field)
+  // @@protoc_insertion_point(constructor:TSCached.Metrics)
 }
-Field::Field(const Field& from)
+Metrics::Metrics(const Metrics& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   fields_.MergeFrom(from.fields_);
   timestamp_ = from.timestamp_;
-  // @@protoc_insertion_point(copy_constructor:TSCached.Field)
+  // @@protoc_insertion_point(copy_constructor:TSCached.Metrics)
 }
 
-void Field::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Field_point_2eproto.base);
+void Metrics::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Metrics_point_2eproto.base);
   timestamp_ = PROTOBUF_LONGLONG(0);
 }
 
-Field::~Field() {
-  // @@protoc_insertion_point(destructor:TSCached.Field)
+Metrics::~Metrics() {
+  // @@protoc_insertion_point(destructor:TSCached.Metrics)
   SharedDtor();
 }
 
-void Field::SharedDtor() {
+void Metrics::SharedDtor() {
 }
 
-void Field::SetCachedSize(int size) const {
+void Metrics::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Field& Field::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Field_point_2eproto.base);
+const Metrics& Metrics::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Metrics_point_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void Field::Clear() {
-// @@protoc_insertion_point(message_clear_start:TSCached.Field)
+void Metrics::Clear() {
+// @@protoc_insertion_point(message_clear_start:TSCached.Metrics)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -449,30 +462,30 @@ void Field::Clear() {
   _internal_metadata_.Clear();
 }
 
-const char* Field::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Metrics::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // map<string, double> fields = 1;
+      // int64 timeStamp = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // map<string, double> fields = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(&fields_, ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
-        continue;
-      // int64 timestamp = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -495,13 +508,19 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Field::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* Metrics::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:TSCached.Field)
+  // @@protoc_insertion_point(serialize_to_array_start:TSCached.Metrics)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // map<string, double> fields = 1;
+  // int64 timeStamp = 1;
+  if (this->timestamp() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(1, this->_internal_timestamp(), target);
+  }
+
+  // map<string, double> fields = 2;
   if (!this->_internal_fields().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, double >::const_pointer
         ConstPtr;
@@ -512,7 +531,7 @@ failure:
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
           ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "TSCached.Field.FieldsEntry.key");
+          "TSCached.Metrics.FieldsEntry.key");
       }
     };
 
@@ -529,51 +548,45 @@ failure:
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        target = Field_FieldsEntry_DoNotUse::Funcs::InternalSerialize(1, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
+        target = Metrics_FieldsEntry_DoNotUse::Funcs::InternalSerialize(2, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       for (::PROTOBUF_NAMESPACE_ID::Map< std::string, double >::const_iterator
           it = this->_internal_fields().begin();
           it != this->_internal_fields().end(); ++it) {
-        target = Field_FieldsEntry_DoNotUse::Funcs::InternalSerialize(1, it->first, it->second, target, stream);
+        target = Metrics_FieldsEntry_DoNotUse::Funcs::InternalSerialize(2, it->first, it->second, target, stream);
         Utf8Check::Check(&(*it));
       }
     }
-  }
-
-  // int64 timestamp = 2;
-  if (this->timestamp() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(2, this->_internal_timestamp(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:TSCached.Field)
+  // @@protoc_insertion_point(serialize_to_array_end:TSCached.Metrics)
   return target;
 }
 
-size_t Field::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:TSCached.Field)
+size_t Metrics::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:TSCached.Metrics)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // map<string, double> fields = 1;
+  // map<string, double> fields = 2;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_fields_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, double >::const_iterator
       it = this->_internal_fields().begin();
       it != this->_internal_fields().end(); ++it) {
-    total_size += Field_FieldsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
+    total_size += Metrics_FieldsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
-  // int64 timestamp = 2;
+  // int64 timeStamp = 1;
   if (this->timestamp() != 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
@@ -589,23 +602,23 @@ size_t Field::ByteSizeLong() const {
   return total_size;
 }
 
-void Field::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:TSCached.Field)
+void Metrics::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:TSCached.Metrics)
   GOOGLE_DCHECK_NE(&from, this);
-  const Field* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Field>(
+  const Metrics* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Metrics>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:TSCached.Field)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:TSCached.Metrics)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:TSCached.Field)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:TSCached.Metrics)
     MergeFrom(*source);
   }
 }
 
-void Field::MergeFrom(const Field& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:TSCached.Field)
+void Metrics::MergeFrom(const Metrics& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:TSCached.Metrics)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -617,102 +630,165 @@ void Field::MergeFrom(const Field& from) {
   }
 }
 
-void Field::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:TSCached.Field)
+void Metrics::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:TSCached.Metrics)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void Field::CopyFrom(const Field& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:TSCached.Field)
+void Metrics::CopyFrom(const Metrics& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:TSCached.Metrics)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool Field::IsInitialized() const {
+bool Metrics::IsInitialized() const {
   return true;
 }
 
-void Field::InternalSwap(Field* other) {
+void Metrics::InternalSwap(Metrics* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   fields_.Swap(&other->fields_);
   swap(timestamp_, other->timestamp_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Field::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Metrics::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void Points::InitAsDefaultInstance() {
+Point_TagsEntry_DoNotUse::Point_TagsEntry_DoNotUse() {}
+Point_TagsEntry_DoNotUse::Point_TagsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+    : SuperType(arena) {}
+void Point_TagsEntry_DoNotUse::MergeFrom(const Point_TagsEntry_DoNotUse& other) {
+  MergeFromInternal(other);
 }
-class Points::_Internal {
+::PROTOBUF_NAMESPACE_ID::Metadata Point_TagsEntry_DoNotUse::GetMetadata() const {
+  return GetMetadataStatic();
+}
+void Point_TagsEntry_DoNotUse::MergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
+  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
+}
+
+
+// ===================================================================
+
+void Point::InitAsDefaultInstance() {
+}
+class Point::_Internal {
  public:
 };
 
-Points::Points()
+Point::Point()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:TSCached.Points)
+  // @@protoc_insertion_point(constructor:TSCached.Point)
 }
-Points::Points(const Points& from)
+Point::Point(const Point& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr),
-      fields_(from.fields_) {
+      metrics_(from.metrics_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:TSCached.Points)
+  tags_.MergeFrom(from.tags_);
+  database_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_database().empty()) {
+    database_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.database_);
+  }
+  tablename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_tablename().empty()) {
+    tablename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tablename_);
+  }
+  // @@protoc_insertion_point(copy_constructor:TSCached.Point)
 }
 
-void Points::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Points_point_2eproto.base);
+void Point::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Point_point_2eproto.base);
+  database_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  tablename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-Points::~Points() {
-  // @@protoc_insertion_point(destructor:TSCached.Points)
+Point::~Point() {
+  // @@protoc_insertion_point(destructor:TSCached.Point)
   SharedDtor();
 }
 
-void Points::SharedDtor() {
+void Point::SharedDtor() {
+  database_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  tablename_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void Points::SetCachedSize(int size) const {
+void Point::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Points& Points::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Points_point_2eproto.base);
+const Point& Point::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Point_point_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void Points::Clear() {
-// @@protoc_insertion_point(message_clear_start:TSCached.Points)
+void Point::Clear() {
+// @@protoc_insertion_point(message_clear_start:TSCached.Point)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  fields_.Clear();
+  tags_.Clear();
+  metrics_.Clear();
+  database_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  tablename_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
-const char* Points::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* Point::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // repeated .TSCached.Field fields = 4;
+      // string dataBase = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_database();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "TSCached.Point.dataBase"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string tableName = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_tablename();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "TSCached.Point.tableName"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // map<string, string> tags = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(&tags_, ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .TSCached.Metrics metrics = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr -= 1;
           do {
             ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_fields(), ptr);
+            ptr = ctx->ParseMessage(_internal_add_metrics(), ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
@@ -738,41 +814,129 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* Points::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* Point::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:TSCached.Points)
+  // @@protoc_insertion_point(serialize_to_array_start:TSCached.Point)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .TSCached.Field fields = 4;
+  // string dataBase = 1;
+  if (this->database().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_database().data(), static_cast<int>(this->_internal_database().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "TSCached.Point.dataBase");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_database(), target);
+  }
+
+  // string tableName = 2;
+  if (this->tablename().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_tablename().data(), static_cast<int>(this->_internal_tablename().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "TSCached.Point.tableName");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_tablename(), target);
+  }
+
+  // map<string, string> tags = 3;
+  if (!this->_internal_tags().empty()) {
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
+        ConstPtr;
+    typedef ConstPtr SortItem;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+          "TSCached.Point.TagsEntry.key");
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+          p->second.data(), static_cast<int>(p->second.length()),
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+          "TSCached.Point.TagsEntry.value");
+      }
+    };
+
+    if (stream->IsSerializationDeterministic() &&
+        this->_internal_tags().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->_internal_tags().size()]);
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
+      size_type n = 0;
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+          it = this->_internal_tags().begin();
+          it != this->_internal_tags().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      for (size_type i = 0; i < n; i++) {
+        target = Point_TagsEntry_DoNotUse::Funcs::InternalSerialize(3, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
+      }
+    } else {
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+          it = this->_internal_tags().begin();
+          it != this->_internal_tags().end(); ++it) {
+        target = Point_TagsEntry_DoNotUse::Funcs::InternalSerialize(3, it->first, it->second, target, stream);
+        Utf8Check::Check(&(*it));
+      }
+    }
+  }
+
+  // repeated .TSCached.Metrics metrics = 4;
   for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_fields_size()); i < n; i++) {
+      n = static_cast<unsigned int>(this->_internal_metrics_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(4, this->_internal_fields(i), target, stream);
+      InternalWriteMessage(4, this->_internal_metrics(i), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:TSCached.Points)
+  // @@protoc_insertion_point(serialize_to_array_end:TSCached.Point)
   return target;
 }
 
-size_t Points::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:TSCached.Points)
+size_t Point::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:TSCached.Point)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated .TSCached.Field fields = 4;
-  total_size += 1UL * this->_internal_fields_size();
-  for (const auto& msg : this->fields_) {
+  // map<string, string> tags = 3;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_tags_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
+      it = this->_internal_tags().begin();
+      it != this->_internal_tags().end(); ++it) {
+    total_size += Point_TagsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
+  }
+
+  // repeated .TSCached.Metrics metrics = 4;
+  total_size += 1UL * this->_internal_metrics_size();
+  for (const auto& msg : this->metrics_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // string dataBase = 1;
+  if (this->database().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_database());
+  }
+
+  // string tableName = 2;
+  if (this->tablename().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_tablename());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -784,56 +948,70 @@ size_t Points::ByteSizeLong() const {
   return total_size;
 }
 
-void Points::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:TSCached.Points)
+void Point::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:TSCached.Point)
   GOOGLE_DCHECK_NE(&from, this);
-  const Points* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Points>(
+  const Point* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Point>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:TSCached.Points)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:TSCached.Point)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:TSCached.Points)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:TSCached.Point)
     MergeFrom(*source);
   }
 }
 
-void Points::MergeFrom(const Points& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:TSCached.Points)
+void Point::MergeFrom(const Point& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:TSCached.Point)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  fields_.MergeFrom(from.fields_);
+  tags_.MergeFrom(from.tags_);
+  metrics_.MergeFrom(from.metrics_);
+  if (from.database().size() > 0) {
+
+    database_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.database_);
+  }
+  if (from.tablename().size() > 0) {
+
+    tablename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tablename_);
+  }
 }
 
-void Points::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:TSCached.Points)
+void Point::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:TSCached.Point)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void Points::CopyFrom(const Points& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:TSCached.Points)
+void Point::CopyFrom(const Point& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:TSCached.Point)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool Points::IsInitialized() const {
+bool Point::IsInitialized() const {
   return true;
 }
 
-void Points::InternalSwap(Points* other) {
+void Point::InternalSwap(Point* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  fields_.InternalSwap(&other->fields_);
+  tags_.Swap(&other->tags_);
+  metrics_.InternalSwap(&other->metrics_);
+  database_.Swap(&other->database_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  tablename_.Swap(&other->tablename_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata Points::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata Point::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -1222,375 +1400,6 @@ void QueryRequest::InternalSwap(QueryRequest* other) {
 
 // ===================================================================
 
-WriteRequest_TagsEntry_DoNotUse::WriteRequest_TagsEntry_DoNotUse() {}
-WriteRequest_TagsEntry_DoNotUse::WriteRequest_TagsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-    : SuperType(arena) {}
-void WriteRequest_TagsEntry_DoNotUse::MergeFrom(const WriteRequest_TagsEntry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
-::PROTOBUF_NAMESPACE_ID::Metadata WriteRequest_TagsEntry_DoNotUse::GetMetadata() const {
-  return GetMetadataStatic();
-}
-void WriteRequest_TagsEntry_DoNotUse::MergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
-  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
-}
-
-
-// ===================================================================
-
-void WriteRequest::InitAsDefaultInstance() {
-  ::TSCached::_WriteRequest_default_instance_._instance.get_mutable()->points_ = const_cast< ::TSCached::Points*>(
-      ::TSCached::Points::internal_default_instance());
-}
-class WriteRequest::_Internal {
- public:
-  static const ::TSCached::Points& points(const WriteRequest* msg);
-};
-
-const ::TSCached::Points&
-WriteRequest::_Internal::points(const WriteRequest* msg) {
-  return *msg->points_;
-}
-WriteRequest::WriteRequest()
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:TSCached.WriteRequest)
-}
-WriteRequest::WriteRequest(const WriteRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  tags_.MergeFrom(from.tags_);
-  database_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_database().empty()) {
-    database_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.database_);
-  }
-  tablename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_tablename().empty()) {
-    tablename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tablename_);
-  }
-  if (from._internal_has_points()) {
-    points_ = new ::TSCached::Points(*from.points_);
-  } else {
-    points_ = nullptr;
-  }
-  // @@protoc_insertion_point(copy_constructor:TSCached.WriteRequest)
-}
-
-void WriteRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_WriteRequest_point_2eproto.base);
-  database_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  tablename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  points_ = nullptr;
-}
-
-WriteRequest::~WriteRequest() {
-  // @@protoc_insertion_point(destructor:TSCached.WriteRequest)
-  SharedDtor();
-}
-
-void WriteRequest::SharedDtor() {
-  database_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  tablename_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete points_;
-}
-
-void WriteRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const WriteRequest& WriteRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_WriteRequest_point_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void WriteRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:TSCached.WriteRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  tags_.Clear();
-  database_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  tablename_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && points_ != nullptr) {
-    delete points_;
-  }
-  points_ = nullptr;
-  _internal_metadata_.Clear();
-}
-
-const char* WriteRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // string dataBase = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_database();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "TSCached.WriteRequest.dataBase"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string tableName = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_tablename();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "TSCached.WriteRequest.tableName"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // map<string, string> tags = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(&tags_, ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
-        } else goto handle_unusual;
-        continue;
-      // .TSCached.Points points = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr = ctx->ParseMessage(_internal_mutable_points(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* WriteRequest::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:TSCached.WriteRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string dataBase = 1;
-  if (this->database().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_database().data(), static_cast<int>(this->_internal_database().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "TSCached.WriteRequest.dataBase");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_database(), target);
-  }
-
-  // string tableName = 2;
-  if (this->tablename().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_tablename().data(), static_cast<int>(this->_internal_tablename().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "TSCached.WriteRequest.tableName");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_tablename(), target);
-  }
-
-  // map<string, string> tags = 3;
-  if (!this->_internal_tags().empty()) {
-    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
-        ConstPtr;
-    typedef ConstPtr SortItem;
-    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
-    struct Utf8Check {
-      static void Check(ConstPtr p) {
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->first.data(), static_cast<int>(p->first.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "TSCached.WriteRequest.TagsEntry.key");
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->second.data(), static_cast<int>(p->second.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "TSCached.WriteRequest.TagsEntry.value");
-      }
-    };
-
-    if (stream->IsSerializationDeterministic() &&
-        this->_internal_tags().size() > 1) {
-      ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->_internal_tags().size()]);
-      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
-      size_type n = 0;
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->_internal_tags().begin();
-          it != this->_internal_tags().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      for (size_type i = 0; i < n; i++) {
-        target = WriteRequest_TagsEntry_DoNotUse::Funcs::InternalSerialize(3, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
-        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
-      }
-    } else {
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->_internal_tags().begin();
-          it != this->_internal_tags().end(); ++it) {
-        target = WriteRequest_TagsEntry_DoNotUse::Funcs::InternalSerialize(3, it->first, it->second, target, stream);
-        Utf8Check::Check(&(*it));
-      }
-    }
-  }
-
-  // .TSCached.Points points = 4;
-  if (this->has_points()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::points(this), target, stream);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:TSCached.WriteRequest)
-  return target;
-}
-
-size_t WriteRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:TSCached.WriteRequest)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // map<string, string> tags = 3;
-  total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_tags_size());
-  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-      it = this->_internal_tags().begin();
-      it != this->_internal_tags().end(); ++it) {
-    total_size += WriteRequest_TagsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
-  }
-
-  // string dataBase = 1;
-  if (this->database().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_database());
-  }
-
-  // string tableName = 2;
-  if (this->tablename().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_tablename());
-  }
-
-  // .TSCached.Points points = 4;
-  if (this->has_points()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *points_);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void WriteRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:TSCached.WriteRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const WriteRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<WriteRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:TSCached.WriteRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:TSCached.WriteRequest)
-    MergeFrom(*source);
-  }
-}
-
-void WriteRequest::MergeFrom(const WriteRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:TSCached.WriteRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  tags_.MergeFrom(from.tags_);
-  if (from.database().size() > 0) {
-
-    database_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.database_);
-  }
-  if (from.tablename().size() > 0) {
-
-    tablename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tablename_);
-  }
-  if (from.has_points()) {
-    _internal_mutable_points()->::TSCached::Points::MergeFrom(from._internal_points());
-  }
-}
-
-void WriteRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:TSCached.WriteRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void WriteRequest::CopyFrom(const WriteRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:TSCached.WriteRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool WriteRequest::IsInitialized() const {
-  return true;
-}
-
-void WriteRequest::InternalSwap(WriteRequest* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  tags_.Swap(&other->tags_);
-  database_.Swap(&other->database_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  tablename_.Swap(&other->tablename_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(points_, other->points_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata WriteRequest::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
 QueryResponse_TagsEntry_DoNotUse::QueryResponse_TagsEntry_DoNotUse() {}
 QueryResponse_TagsEntry_DoNotUse::QueryResponse_TagsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
     : SuperType(arena) {}
@@ -1609,18 +1418,11 @@ void QueryResponse_TagsEntry_DoNotUse::MergeFrom(
 // ===================================================================
 
 void QueryResponse::InitAsDefaultInstance() {
-  ::TSCached::_QueryResponse_default_instance_._instance.get_mutable()->points_ = const_cast< ::TSCached::Points*>(
-      ::TSCached::Points::internal_default_instance());
 }
 class QueryResponse::_Internal {
  public:
-  static const ::TSCached::Points& points(const QueryResponse* msg);
 };
 
-const ::TSCached::Points&
-QueryResponse::_Internal::points(const QueryResponse* msg) {
-  return *msg->points_;
-}
 QueryResponse::QueryResponse()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
@@ -1628,13 +1430,10 @@ QueryResponse::QueryResponse()
 }
 QueryResponse::QueryResponse(const QueryResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(nullptr),
+      metrics_(from.metrics_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   tags_.MergeFrom(from.tags_);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_message().empty()) {
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
-  }
   database_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_database().empty()) {
     database_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.database_);
@@ -1643,23 +1442,13 @@ QueryResponse::QueryResponse(const QueryResponse& from)
   if (!from._internal_tablename().empty()) {
     tablename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tablename_);
   }
-  if (from._internal_has_points()) {
-    points_ = new ::TSCached::Points(*from.points_);
-  } else {
-    points_ = nullptr;
-  }
-  statuscode_ = from.statuscode_;
   // @@protoc_insertion_point(copy_constructor:TSCached.QueryResponse)
 }
 
 void QueryResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_QueryResponse_point_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   database_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   tablename_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&points_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&statuscode_) -
-      reinterpret_cast<char*>(&points_)) + sizeof(statuscode_));
 }
 
 QueryResponse::~QueryResponse() {
@@ -1668,10 +1457,8 @@ QueryResponse::~QueryResponse() {
 }
 
 void QueryResponse::SharedDtor() {
-  message_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   database_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   tablename_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete points_;
 }
 
 void QueryResponse::SetCachedSize(int size) const {
@@ -1690,14 +1477,9 @@ void QueryResponse::Clear() {
   (void) cached_has_bits;
 
   tags_.Clear();
-  message_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  metrics_.Clear();
   database_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   tablename_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && points_ != nullptr) {
-    delete points_;
-  }
-  points_ = nullptr;
-  statuscode_ = 0;
   _internal_metadata_.Clear();
 }
 
@@ -1708,57 +1490,46 @@ const char* QueryResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // string message = 1;
+      // string dataBase = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_message();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "TSCached.QueryResponse.message"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // int32 statusCode = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          statuscode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string dataBase = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_database();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "TSCached.QueryResponse.dataBase"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string tableName = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+      // string tableName = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_tablename();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "TSCached.QueryResponse.tableName"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // map<string, string> tags = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+      // map<string, string> tags = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
             ptr = ctx->ParseMessage(&tags_, ptr);
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else goto handle_unusual;
         continue;
-      // .TSCached.Points points = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr = ctx->ParseMessage(_internal_mutable_points(), ptr);
-          CHK_(ptr);
+      // repeated .TSCached.Metrics metrics = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_metrics(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -1787,43 +1558,27 @@ failure:
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // string message = 1;
-  if (this->message().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_message().data(), static_cast<int>(this->_internal_message().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "TSCached.QueryResponse.message");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_message(), target);
-  }
-
-  // int32 statusCode = 2;
-  if (this->statuscode() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_statuscode(), target);
-  }
-
-  // string dataBase = 3;
+  // string dataBase = 1;
   if (this->database().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_database().data(), static_cast<int>(this->_internal_database().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "TSCached.QueryResponse.dataBase");
     target = stream->WriteStringMaybeAliased(
-        3, this->_internal_database(), target);
+        1, this->_internal_database(), target);
   }
 
-  // string tableName = 4;
+  // string tableName = 2;
   if (this->tablename().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_tablename().data(), static_cast<int>(this->_internal_tablename().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "TSCached.QueryResponse.tableName");
     target = stream->WriteStringMaybeAliased(
-        4, this->_internal_tablename(), target);
+        2, this->_internal_tablename(), target);
   }
 
-  // map<string, string> tags = 5;
+  // map<string, string> tags = 3;
   if (!this->_internal_tags().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
@@ -1855,25 +1610,25 @@ failure:
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        target = QueryResponse_TagsEntry_DoNotUse::Funcs::InternalSerialize(5, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
+        target = QueryResponse_TagsEntry_DoNotUse::Funcs::InternalSerialize(3, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
           it = this->_internal_tags().begin();
           it != this->_internal_tags().end(); ++it) {
-        target = QueryResponse_TagsEntry_DoNotUse::Funcs::InternalSerialize(5, it->first, it->second, target, stream);
+        target = QueryResponse_TagsEntry_DoNotUse::Funcs::InternalSerialize(3, it->first, it->second, target, stream);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
-  // .TSCached.Points points = 6;
-  if (this->has_points()) {
+  // repeated .TSCached.Metrics metrics = 4;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_metrics_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        6, _Internal::points(this), target, stream);
+      InternalWriteMessage(4, this->_internal_metrics(i), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1892,7 +1647,7 @@ size_t QueryResponse::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // map<string, string> tags = 5;
+  // map<string, string> tags = 3;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_tags_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
@@ -1901,39 +1656,25 @@ size_t QueryResponse::ByteSizeLong() const {
     total_size += QueryResponse_TagsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
-  // string message = 1;
-  if (this->message().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_message());
+  // repeated .TSCached.Metrics metrics = 4;
+  total_size += 1UL * this->_internal_metrics_size();
+  for (const auto& msg : this->metrics_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  // string dataBase = 3;
+  // string dataBase = 1;
   if (this->database().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_database());
   }
 
-  // string tableName = 4;
+  // string tableName = 2;
   if (this->tablename().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_tablename());
-  }
-
-  // .TSCached.Points points = 6;
-  if (this->has_points()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *points_);
-  }
-
-  // int32 statusCode = 2;
-  if (this->statuscode() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_statuscode());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1968,10 +1709,7 @@ void QueryResponse::MergeFrom(const QueryResponse& from) {
   (void) cached_has_bits;
 
   tags_.MergeFrom(from.tags_);
-  if (from.message().size() > 0) {
-
-    message_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.message_);
-  }
+  metrics_.MergeFrom(from.metrics_);
   if (from.database().size() > 0) {
 
     database_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.database_);
@@ -1979,12 +1717,6 @@ void QueryResponse::MergeFrom(const QueryResponse& from) {
   if (from.tablename().size() > 0) {
 
     tablename_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.tablename_);
-  }
-  if (from.has_points()) {
-    _internal_mutable_points()->::TSCached::Points::MergeFrom(from._internal_points());
-  }
-  if (from.statuscode() != 0) {
-    _internal_set_statuscode(from._internal_statuscode());
   }
 }
 
@@ -2010,17 +1742,205 @@ void QueryResponse::InternalSwap(QueryResponse* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   tags_.Swap(&other->tags_);
-  message_.Swap(&other->message_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
+  metrics_.InternalSwap(&other->metrics_);
   database_.Swap(&other->database_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   tablename_.Swap(&other->tablename_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(points_, other->points_);
-  swap(statuscode_, other->statuscode_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata QueryResponse::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void WriteRequest::InitAsDefaultInstance() {
+}
+class WriteRequest::_Internal {
+ public:
+};
+
+WriteRequest::WriteRequest()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:TSCached.WriteRequest)
+}
+WriteRequest::WriteRequest(const WriteRequest& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      points_(from.points_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:TSCached.WriteRequest)
+}
+
+void WriteRequest::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_WriteRequest_point_2eproto.base);
+}
+
+WriteRequest::~WriteRequest() {
+  // @@protoc_insertion_point(destructor:TSCached.WriteRequest)
+  SharedDtor();
+}
+
+void WriteRequest::SharedDtor() {
+}
+
+void WriteRequest::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const WriteRequest& WriteRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_WriteRequest_point_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void WriteRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:TSCached.WriteRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  points_.Clear();
+  _internal_metadata_.Clear();
+}
+
+const char* WriteRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // repeated .TSCached.Point points = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_points(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* WriteRequest::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:TSCached.WriteRequest)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .TSCached.Point points = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_points_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, this->_internal_points(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:TSCached.WriteRequest)
+  return target;
+}
+
+size_t WriteRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:TSCached.WriteRequest)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .TSCached.Point points = 1;
+  total_size += 1UL * this->_internal_points_size();
+  for (const auto& msg : this->points_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void WriteRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:TSCached.WriteRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const WriteRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<WriteRequest>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:TSCached.WriteRequest)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:TSCached.WriteRequest)
+    MergeFrom(*source);
+  }
+}
+
+void WriteRequest::MergeFrom(const WriteRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:TSCached.WriteRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  points_.MergeFrom(from.points_);
+}
+
+void WriteRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:TSCached.WriteRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void WriteRequest::CopyFrom(const WriteRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:TSCached.WriteRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool WriteRequest::IsInitialized() const {
+  return true;
+}
+
+void WriteRequest::InternalSwap(WriteRequest* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  points_.InternalSwap(&other->points_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata WriteRequest::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -2101,11 +2021,12 @@ const char* WriteResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // int32 statusCode = 2;
+      // .TSCached.StatusCode statusCode = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          statuscode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
           CHK_(ptr);
+          _internal_set_statuscode(static_cast<::TSCached::StatusCode>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -2144,10 +2065,11 @@ failure:
         1, this->_internal_message(), target);
   }
 
-  // int32 statusCode = 2;
+  // .TSCached.StatusCode statusCode = 2;
   if (this->statuscode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_statuscode(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_statuscode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2173,11 +2095,10 @@ size_t WriteResponse::ByteSizeLong() const {
         this->_internal_message());
   }
 
-  // int32 statusCode = 2;
+  // .TSCached.StatusCode statusCode = 2;
   if (this->statuscode() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_statuscode());
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_statuscode());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -2254,14 +2175,17 @@ void WriteResponse::InternalSwap(WriteResponse* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace TSCached
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::TSCached::Field_FieldsEntry_DoNotUse* Arena::CreateMaybeMessage< ::TSCached::Field_FieldsEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateInternal< ::TSCached::Field_FieldsEntry_DoNotUse >(arena);
+template<> PROTOBUF_NOINLINE ::TSCached::Metrics_FieldsEntry_DoNotUse* Arena::CreateMaybeMessage< ::TSCached::Metrics_FieldsEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::TSCached::Metrics_FieldsEntry_DoNotUse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::TSCached::Field* Arena::CreateMaybeMessage< ::TSCached::Field >(Arena* arena) {
-  return Arena::CreateInternal< ::TSCached::Field >(arena);
+template<> PROTOBUF_NOINLINE ::TSCached::Metrics* Arena::CreateMaybeMessage< ::TSCached::Metrics >(Arena* arena) {
+  return Arena::CreateInternal< ::TSCached::Metrics >(arena);
 }
-template<> PROTOBUF_NOINLINE ::TSCached::Points* Arena::CreateMaybeMessage< ::TSCached::Points >(Arena* arena) {
-  return Arena::CreateInternal< ::TSCached::Points >(arena);
+template<> PROTOBUF_NOINLINE ::TSCached::Point_TagsEntry_DoNotUse* Arena::CreateMaybeMessage< ::TSCached::Point_TagsEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::TSCached::Point_TagsEntry_DoNotUse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::TSCached::Point* Arena::CreateMaybeMessage< ::TSCached::Point >(Arena* arena) {
+  return Arena::CreateInternal< ::TSCached::Point >(arena);
 }
 template<> PROTOBUF_NOINLINE ::TSCached::QueryRequest_TagsEntry_DoNotUse* Arena::CreateMaybeMessage< ::TSCached::QueryRequest_TagsEntry_DoNotUse >(Arena* arena) {
   return Arena::CreateInternal< ::TSCached::QueryRequest_TagsEntry_DoNotUse >(arena);
@@ -2269,17 +2193,14 @@ template<> PROTOBUF_NOINLINE ::TSCached::QueryRequest_TagsEntry_DoNotUse* Arena:
 template<> PROTOBUF_NOINLINE ::TSCached::QueryRequest* Arena::CreateMaybeMessage< ::TSCached::QueryRequest >(Arena* arena) {
   return Arena::CreateInternal< ::TSCached::QueryRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::TSCached::WriteRequest_TagsEntry_DoNotUse* Arena::CreateMaybeMessage< ::TSCached::WriteRequest_TagsEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateInternal< ::TSCached::WriteRequest_TagsEntry_DoNotUse >(arena);
-}
-template<> PROTOBUF_NOINLINE ::TSCached::WriteRequest* Arena::CreateMaybeMessage< ::TSCached::WriteRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::TSCached::WriteRequest >(arena);
-}
 template<> PROTOBUF_NOINLINE ::TSCached::QueryResponse_TagsEntry_DoNotUse* Arena::CreateMaybeMessage< ::TSCached::QueryResponse_TagsEntry_DoNotUse >(Arena* arena) {
   return Arena::CreateInternal< ::TSCached::QueryResponse_TagsEntry_DoNotUse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::TSCached::QueryResponse* Arena::CreateMaybeMessage< ::TSCached::QueryResponse >(Arena* arena) {
   return Arena::CreateInternal< ::TSCached::QueryResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::TSCached::WriteRequest* Arena::CreateMaybeMessage< ::TSCached::WriteRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::TSCached::WriteRequest >(arena);
 }
 template<> PROTOBUF_NOINLINE ::TSCached::WriteResponse* Arena::CreateMaybeMessage< ::TSCached::WriteResponse >(Arena* arena) {
   return Arena::CreateInternal< ::TSCached::WriteResponse >(arena);

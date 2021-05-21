@@ -1,3 +1,1 @@
-"D:\Program Files\JetBrains\CLion 2020.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\TSCached.dir/objects.a
-D:\mingw64\bin\ar.exe cr CMakeFiles\TSCached.dir/objects.a @CMakeFiles\TSCached.dir\objects1.rsp
-D:\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\TSCached.dir/objects.a -Wl,--no-whole-archive  -o TSCached.exe -Wl,--out-implib,libTSCached.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\TSCached.dir\linklibs.rsp
+/usr/bin/c++  -pthread -g   CMakeFiles/TSCached.dir/main.cpp.o CMakeFiles/TSCached.dir/storage/point.cpp.o CMakeFiles/TSCached.dir/storage/block.cpp.o CMakeFiles/TSCached.dir/storage/ts.cpp.o CMakeFiles/TSCached.dir/storage/tsmap.cpp.o CMakeFiles/TSCached.dir/protobuf/point.pb.cc.o CMakeFiles/TSCached.dir/protobuf/point.grpc.pb.cc.o CMakeFiles/TSCached.dir/server/TSCachedServiceImpl.cpp.o  -o TSCached 
