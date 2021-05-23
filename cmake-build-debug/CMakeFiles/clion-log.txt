@@ -1,4 +1,11 @@
 /usr/local/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/e/Clion/TSCached
+-- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.58.0") found components: filesystem system 
+-- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.51.0") found components: context filesystem program_options regex system thread chrono date_time atomic 
+-- Found folly: /usr/local
+-- Using protobuf 3.11.2.0
+-- Using gRPC 1.28.0-pre3
+    -- src/client.cpp will be compiled to bin/client
+    -- src/server.cpp will be compiled to bin/server
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /mnt/e/Clion/TSCached/cmake-build-debug

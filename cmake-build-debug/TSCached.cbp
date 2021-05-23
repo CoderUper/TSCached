@@ -5,7 +5,7 @@
 		<Option title="TSCached"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\folly\;CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\;CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\;CMake Files\..\..\..\..\usr\local\lib\cmake\grpc\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/mnt/e/Clion/TSCached/cmake-build-debug"/>
@@ -27,6 +27,64 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="server">
+				<Option output="/mnt/e/Clion/TSCached/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/e/Clion/TSCached/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DFMT_LOCALE"/>
+					<Add directory="/mnt/e/Clion/TSCached/."/>
+					<Add directory="/usr/include/libdwarf"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 server"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="server/fast">
+				<Option output="/mnt/e/Clion/TSCached/cmake-build-debug/server" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/e/Clion/TSCached/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DFMT_LOCALE"/>
+					<Add directory="/mnt/e/Clion/TSCached/."/>
+					<Add directory="/usr/include/libdwarf"/>
+					<Add directory="/usr/include/libiberty"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 server/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/mnt/e/Clion/TSCached/cmake-build-debug"/>
 				<Option type="4"/>
@@ -37,14 +95,19 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TSCached">
-				<Option output="/mnt/e/Clion/TSCached/cmake-build-debug/TSCached" prefix_auto="0" extension_auto="0"/>
+			<Target title="client">
+				<Option output="/mnt/e/Clion/TSCached/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/mnt/e/Clion/TSCached/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DFMT_LOCALE"/>
 					<Add directory="/mnt/e/Clion/TSCached/."/>
+					<Add directory="/usr/include/libdwarf"/>
+					<Add directory="/usr/include/libiberty"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -55,20 +118,25 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 TSCached"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 client"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="TSCached/fast">
-				<Option output="/mnt/e/Clion/TSCached/cmake-build-debug/TSCached" prefix_auto="0" extension_auto="0"/>
+			<Target title="client/fast">
+				<Option output="/mnt/e/Clion/TSCached/cmake-build-debug/client" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/mnt/e/Clion/TSCached/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add option="-DCARES_STATICLIB"/>
+					<Add option="-D__CLANG_SUPPORT_DYN_ANNOTATION__"/>
+					<Add option="-DFMT_LOCALE"/>
 					<Add directory="/mnt/e/Clion/TSCached/."/>
+					<Add directory="/usr/include/libdwarf"/>
+					<Add directory="/usr/include/libiberty"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -79,60 +147,184 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 TSCached/fast"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 client/fast"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/e/Clion/TSCached/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/e/Clion/TSCached/main.cpp">
-			<Option target="TSCached"/>
+		<Unit filename="/mnt/e/Clion/TSCached/client.cpp">
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/client/QueryResult.h">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/client/TSCachedClient.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/client/TSCachedClient.h">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/client/WriteRequest.h">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/manager/ClearTaskManager.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/manager/ClearTaskManager.h">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/manager/Config.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/manager/Config.h">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/manager/Timer.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/manager/Timer.h">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/manager/TimerManager.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/manager/TimerManager.h">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
 		<Unit filename="/mnt/e/Clion/TSCached/protobuf/point.grpc.pb.cc">
-			<Option target="TSCached"/>
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
 		<Unit filename="/mnt/e/Clion/TSCached/protobuf/point.grpc.pb.h">
-			<Option target="TSCached"/>
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
 		<Unit filename="/mnt/e/Clion/TSCached/protobuf/point.pb.cc">
-			<Option target="TSCached"/>
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
 		<Unit filename="/mnt/e/Clion/TSCached/protobuf/point.pb.h">
-			<Option target="TSCached"/>
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/server.cpp">
+			<Option target="server"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/server/TSCachedServer.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/server/TSCachedServer.h">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
 		<Unit filename="/mnt/e/Clion/TSCached/server/TSCachedServiceImpl.cpp">
-			<Option target="TSCached"/>
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
 		<Unit filename="/mnt/e/Clion/TSCached/server/TSCachedServiceImpl.h">
-			<Option target="TSCached"/>
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
-		<Unit filename="/mnt/e/Clion/TSCached/storage/block.cpp">
-			<Option target="TSCached"/>
+		<Unit filename="/mnt/e/Clion/TSCached/storage/BlockData.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
-		<Unit filename="/mnt/e/Clion/TSCached/storage/block.h">
-			<Option target="TSCached"/>
+		<Unit filename="/mnt/e/Clion/TSCached/storage/BlockData.h">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
-		<Unit filename="/mnt/e/Clion/TSCached/storage/point.cpp">
-			<Option target="TSCached"/>
+		<Unit filename="/mnt/e/Clion/TSCached/storage/TimeSeries.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
-		<Unit filename="/mnt/e/Clion/TSCached/storage/point.h">
-			<Option target="TSCached"/>
+		<Unit filename="/mnt/e/Clion/TSCached/storage/TimeSeries.h">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
-		<Unit filename="/mnt/e/Clion/TSCached/storage/ts.cpp">
-			<Option target="TSCached"/>
+		<Unit filename="/mnt/e/Clion/TSCached/storage/TimeSeriesMap.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
-		<Unit filename="/mnt/e/Clion/TSCached/storage/ts.h">
-			<Option target="TSCached"/>
+		<Unit filename="/mnt/e/Clion/TSCached/storage/TimeSeriesMap.h">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
-		<Unit filename="/mnt/e/Clion/TSCached/storage/tsmap.cpp">
-			<Option target="TSCached"/>
+		<Unit filename="/mnt/e/Clion/TSCached/utils/PointUtils.cpp">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
-		<Unit filename="/mnt/e/Clion/TSCached/storage/tsmap.h">
-			<Option target="TSCached"/>
+		<Unit filename="/mnt/e/Clion/TSCached/utils/PointUtils.h">
+			<Option target="server"/>
+			<Option target="client"/>
 		</Unit>
 		<Unit filename="/mnt/e/Clion/TSCached/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/folly/folly-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\folly\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/folly/folly-targets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\folly\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/folly/folly-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\folly\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/fmt/fmt-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/fmt/fmt-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/fmt/fmt-targets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/fmt/fmt-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\fmt\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/protobuf/protobuf-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/protobuf/protobuf-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/protobuf/protobuf-module.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/protobuf/protobuf-options.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/protobuf/protobuf-targets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/protobuf/protobuf-targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\protobuf\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/grpc/gRPCConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/grpc/gRPCConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/grpc/gRPCTargets-noconfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\grpc\"/>
+		</Unit>
+		<Unit filename="/mnt/e/Clion/TSCached/../../../../usr/local/lib/cmake/grpc/gRPCTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\grpc\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

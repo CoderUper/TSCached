@@ -111,44 +111,207 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named TSCached
+# Target rules for targets named server
 
 # Build rule for target.
-TSCached: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TSCached
-.PHONY : TSCached
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-TSCached/fast:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/build
-.PHONY : TSCached/fast
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
 
-main.o: main.cpp.o
+#=============================================================================
+# Target rules for targets named client
 
-.PHONY : main.o
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
+.PHONY : client/fast
+
+client.o: client.cpp.o
+
+.PHONY : client.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/main.cpp.o
-.PHONY : main.cpp.o
+client.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.o
+.PHONY : client.cpp.o
 
-main.i: main.cpp.i
+client.i: client.cpp.i
 
-.PHONY : main.i
+.PHONY : client.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/main.cpp.i
-.PHONY : main.cpp.i
+client.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.i
+.PHONY : client.cpp.i
 
-main.s: main.cpp.s
+client.s: client.cpp.s
 
-.PHONY : main.s
+.PHONY : client.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/main.cpp.s
-.PHONY : main.cpp.s
+client.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.s
+.PHONY : client.cpp.s
+
+client/TSCachedClient.o: client/TSCachedClient.cpp.o
+
+.PHONY : client/TSCachedClient.o
+
+# target to build an object file
+client/TSCachedClient.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/client/TSCachedClient.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/TSCachedClient.cpp.o
+.PHONY : client/TSCachedClient.cpp.o
+
+client/TSCachedClient.i: client/TSCachedClient.cpp.i
+
+.PHONY : client/TSCachedClient.i
+
+# target to preprocess a source file
+client/TSCachedClient.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/client/TSCachedClient.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/TSCachedClient.cpp.i
+.PHONY : client/TSCachedClient.cpp.i
+
+client/TSCachedClient.s: client/TSCachedClient.cpp.s
+
+.PHONY : client/TSCachedClient.s
+
+# target to generate assembly for a file
+client/TSCachedClient.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/client/TSCachedClient.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/TSCachedClient.cpp.s
+.PHONY : client/TSCachedClient.cpp.s
+
+manager/ClearTaskManager.o: manager/ClearTaskManager.cpp.o
+
+.PHONY : manager/ClearTaskManager.o
+
+# target to build an object file
+manager/ClearTaskManager.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/ClearTaskManager.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/ClearTaskManager.cpp.o
+.PHONY : manager/ClearTaskManager.cpp.o
+
+manager/ClearTaskManager.i: manager/ClearTaskManager.cpp.i
+
+.PHONY : manager/ClearTaskManager.i
+
+# target to preprocess a source file
+manager/ClearTaskManager.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/ClearTaskManager.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/ClearTaskManager.cpp.i
+.PHONY : manager/ClearTaskManager.cpp.i
+
+manager/ClearTaskManager.s: manager/ClearTaskManager.cpp.s
+
+.PHONY : manager/ClearTaskManager.s
+
+# target to generate assembly for a file
+manager/ClearTaskManager.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/ClearTaskManager.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/ClearTaskManager.cpp.s
+.PHONY : manager/ClearTaskManager.cpp.s
+
+manager/Config.o: manager/Config.cpp.o
+
+.PHONY : manager/Config.o
+
+# target to build an object file
+manager/Config.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/Config.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/Config.cpp.o
+.PHONY : manager/Config.cpp.o
+
+manager/Config.i: manager/Config.cpp.i
+
+.PHONY : manager/Config.i
+
+# target to preprocess a source file
+manager/Config.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/Config.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/Config.cpp.i
+.PHONY : manager/Config.cpp.i
+
+manager/Config.s: manager/Config.cpp.s
+
+.PHONY : manager/Config.s
+
+# target to generate assembly for a file
+manager/Config.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/Config.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/Config.cpp.s
+.PHONY : manager/Config.cpp.s
+
+manager/Timer.o: manager/Timer.cpp.o
+
+.PHONY : manager/Timer.o
+
+# target to build an object file
+manager/Timer.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/Timer.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/Timer.cpp.o
+.PHONY : manager/Timer.cpp.o
+
+manager/Timer.i: manager/Timer.cpp.i
+
+.PHONY : manager/Timer.i
+
+# target to preprocess a source file
+manager/Timer.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/Timer.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/Timer.cpp.i
+.PHONY : manager/Timer.cpp.i
+
+manager/Timer.s: manager/Timer.cpp.s
+
+.PHONY : manager/Timer.s
+
+# target to generate assembly for a file
+manager/Timer.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/Timer.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/Timer.cpp.s
+.PHONY : manager/Timer.cpp.s
+
+manager/TimerManager.o: manager/TimerManager.cpp.o
+
+.PHONY : manager/TimerManager.o
+
+# target to build an object file
+manager/TimerManager.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/TimerManager.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/TimerManager.cpp.o
+.PHONY : manager/TimerManager.cpp.o
+
+manager/TimerManager.i: manager/TimerManager.cpp.i
+
+.PHONY : manager/TimerManager.i
+
+# target to preprocess a source file
+manager/TimerManager.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/TimerManager.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/TimerManager.cpp.i
+.PHONY : manager/TimerManager.cpp.i
+
+manager/TimerManager.s: manager/TimerManager.cpp.s
+
+.PHONY : manager/TimerManager.s
+
+# target to generate assembly for a file
+manager/TimerManager.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/manager/TimerManager.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/manager/TimerManager.cpp.s
+.PHONY : manager/TimerManager.cpp.s
 
 protobuf/point.grpc.pb.o: protobuf/point.grpc.pb.cc.o
 
@@ -156,7 +319,8 @@ protobuf/point.grpc.pb.o: protobuf/point.grpc.pb.cc.o
 
 # target to build an object file
 protobuf/point.grpc.pb.cc.o:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/protobuf/point.grpc.pb.cc.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/protobuf/point.grpc.pb.cc.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/protobuf/point.grpc.pb.cc.o
 .PHONY : protobuf/point.grpc.pb.cc.o
 
 protobuf/point.grpc.pb.i: protobuf/point.grpc.pb.cc.i
@@ -165,7 +329,8 @@ protobuf/point.grpc.pb.i: protobuf/point.grpc.pb.cc.i
 
 # target to preprocess a source file
 protobuf/point.grpc.pb.cc.i:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/protobuf/point.grpc.pb.cc.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/protobuf/point.grpc.pb.cc.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/protobuf/point.grpc.pb.cc.i
 .PHONY : protobuf/point.grpc.pb.cc.i
 
 protobuf/point.grpc.pb.s: protobuf/point.grpc.pb.cc.s
@@ -174,7 +339,8 @@ protobuf/point.grpc.pb.s: protobuf/point.grpc.pb.cc.s
 
 # target to generate assembly for a file
 protobuf/point.grpc.pb.cc.s:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/protobuf/point.grpc.pb.cc.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/protobuf/point.grpc.pb.cc.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/protobuf/point.grpc.pb.cc.s
 .PHONY : protobuf/point.grpc.pb.cc.s
 
 protobuf/point.pb.o: protobuf/point.pb.cc.o
@@ -183,7 +349,8 @@ protobuf/point.pb.o: protobuf/point.pb.cc.o
 
 # target to build an object file
 protobuf/point.pb.cc.o:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/protobuf/point.pb.cc.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/protobuf/point.pb.cc.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/protobuf/point.pb.cc.o
 .PHONY : protobuf/point.pb.cc.o
 
 protobuf/point.pb.i: protobuf/point.pb.cc.i
@@ -192,7 +359,8 @@ protobuf/point.pb.i: protobuf/point.pb.cc.i
 
 # target to preprocess a source file
 protobuf/point.pb.cc.i:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/protobuf/point.pb.cc.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/protobuf/point.pb.cc.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/protobuf/point.pb.cc.i
 .PHONY : protobuf/point.pb.cc.i
 
 protobuf/point.pb.s: protobuf/point.pb.cc.s
@@ -201,8 +369,66 @@ protobuf/point.pb.s: protobuf/point.pb.cc.s
 
 # target to generate assembly for a file
 protobuf/point.pb.cc.s:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/protobuf/point.pb.cc.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/protobuf/point.pb.cc.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/protobuf/point.pb.cc.s
 .PHONY : protobuf/point.pb.cc.s
+
+server.o: server.cpp.o
+
+.PHONY : server.o
+
+# target to build an object file
+server.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.o
+.PHONY : server.cpp.o
+
+server.i: server.cpp.i
+
+.PHONY : server.i
+
+# target to preprocess a source file
+server.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.i
+.PHONY : server.cpp.i
+
+server.s: server.cpp.s
+
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.s
+.PHONY : server.cpp.s
+
+server/TSCachedServer.o: server/TSCachedServer.cpp.o
+
+.PHONY : server/TSCachedServer.o
+
+# target to build an object file
+server/TSCachedServer.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/TSCachedServer.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/server/TSCachedServer.cpp.o
+.PHONY : server/TSCachedServer.cpp.o
+
+server/TSCachedServer.i: server/TSCachedServer.cpp.i
+
+.PHONY : server/TSCachedServer.i
+
+# target to preprocess a source file
+server/TSCachedServer.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/TSCachedServer.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/server/TSCachedServer.cpp.i
+.PHONY : server/TSCachedServer.cpp.i
+
+server/TSCachedServer.s: server/TSCachedServer.cpp.s
+
+.PHONY : server/TSCachedServer.s
+
+# target to generate assembly for a file
+server/TSCachedServer.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/TSCachedServer.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/server/TSCachedServer.cpp.s
+.PHONY : server/TSCachedServer.cpp.s
 
 server/TSCachedServiceImpl.o: server/TSCachedServiceImpl.cpp.o
 
@@ -210,7 +436,8 @@ server/TSCachedServiceImpl.o: server/TSCachedServiceImpl.cpp.o
 
 # target to build an object file
 server/TSCachedServiceImpl.cpp.o:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/server/TSCachedServiceImpl.cpp.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/TSCachedServiceImpl.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/server/TSCachedServiceImpl.cpp.o
 .PHONY : server/TSCachedServiceImpl.cpp.o
 
 server/TSCachedServiceImpl.i: server/TSCachedServiceImpl.cpp.i
@@ -219,7 +446,8 @@ server/TSCachedServiceImpl.i: server/TSCachedServiceImpl.cpp.i
 
 # target to preprocess a source file
 server/TSCachedServiceImpl.cpp.i:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/server/TSCachedServiceImpl.cpp.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/TSCachedServiceImpl.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/server/TSCachedServiceImpl.cpp.i
 .PHONY : server/TSCachedServiceImpl.cpp.i
 
 server/TSCachedServiceImpl.s: server/TSCachedServiceImpl.cpp.s
@@ -228,116 +456,129 @@ server/TSCachedServiceImpl.s: server/TSCachedServiceImpl.cpp.s
 
 # target to generate assembly for a file
 server/TSCachedServiceImpl.cpp.s:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/server/TSCachedServiceImpl.cpp.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/TSCachedServiceImpl.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/server/TSCachedServiceImpl.cpp.s
 .PHONY : server/TSCachedServiceImpl.cpp.s
 
-storage/block.o: storage/block.cpp.o
+storage/BlockData.o: storage/BlockData.cpp.o
 
-.PHONY : storage/block.o
-
-# target to build an object file
-storage/block.cpp.o:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/block.cpp.o
-.PHONY : storage/block.cpp.o
-
-storage/block.i: storage/block.cpp.i
-
-.PHONY : storage/block.i
-
-# target to preprocess a source file
-storage/block.cpp.i:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/block.cpp.i
-.PHONY : storage/block.cpp.i
-
-storage/block.s: storage/block.cpp.s
-
-.PHONY : storage/block.s
-
-# target to generate assembly for a file
-storage/block.cpp.s:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/block.cpp.s
-.PHONY : storage/block.cpp.s
-
-storage/point.o: storage/point.cpp.o
-
-.PHONY : storage/point.o
+.PHONY : storage/BlockData.o
 
 # target to build an object file
-storage/point.cpp.o:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/point.cpp.o
-.PHONY : storage/point.cpp.o
+storage/BlockData.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/storage/BlockData.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/storage/BlockData.cpp.o
+.PHONY : storage/BlockData.cpp.o
 
-storage/point.i: storage/point.cpp.i
+storage/BlockData.i: storage/BlockData.cpp.i
 
-.PHONY : storage/point.i
+.PHONY : storage/BlockData.i
 
 # target to preprocess a source file
-storage/point.cpp.i:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/point.cpp.i
-.PHONY : storage/point.cpp.i
+storage/BlockData.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/storage/BlockData.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/storage/BlockData.cpp.i
+.PHONY : storage/BlockData.cpp.i
 
-storage/point.s: storage/point.cpp.s
+storage/BlockData.s: storage/BlockData.cpp.s
 
-.PHONY : storage/point.s
+.PHONY : storage/BlockData.s
 
 # target to generate assembly for a file
-storage/point.cpp.s:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/point.cpp.s
-.PHONY : storage/point.cpp.s
+storage/BlockData.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/storage/BlockData.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/storage/BlockData.cpp.s
+.PHONY : storage/BlockData.cpp.s
 
-storage/ts.o: storage/ts.cpp.o
+storage/TimeSeries.o: storage/TimeSeries.cpp.o
 
-.PHONY : storage/ts.o
+.PHONY : storage/TimeSeries.o
 
 # target to build an object file
-storage/ts.cpp.o:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/ts.cpp.o
-.PHONY : storage/ts.cpp.o
+storage/TimeSeries.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/storage/TimeSeries.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/storage/TimeSeries.cpp.o
+.PHONY : storage/TimeSeries.cpp.o
 
-storage/ts.i: storage/ts.cpp.i
+storage/TimeSeries.i: storage/TimeSeries.cpp.i
 
-.PHONY : storage/ts.i
+.PHONY : storage/TimeSeries.i
 
 # target to preprocess a source file
-storage/ts.cpp.i:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/ts.cpp.i
-.PHONY : storage/ts.cpp.i
+storage/TimeSeries.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/storage/TimeSeries.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/storage/TimeSeries.cpp.i
+.PHONY : storage/TimeSeries.cpp.i
 
-storage/ts.s: storage/ts.cpp.s
+storage/TimeSeries.s: storage/TimeSeries.cpp.s
 
-.PHONY : storage/ts.s
+.PHONY : storage/TimeSeries.s
 
 # target to generate assembly for a file
-storage/ts.cpp.s:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/ts.cpp.s
-.PHONY : storage/ts.cpp.s
+storage/TimeSeries.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/storage/TimeSeries.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/storage/TimeSeries.cpp.s
+.PHONY : storage/TimeSeries.cpp.s
 
-storage/tsmap.o: storage/tsmap.cpp.o
+storage/TimeSeriesMap.o: storage/TimeSeriesMap.cpp.o
 
-.PHONY : storage/tsmap.o
+.PHONY : storage/TimeSeriesMap.o
 
 # target to build an object file
-storage/tsmap.cpp.o:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/tsmap.cpp.o
-.PHONY : storage/tsmap.cpp.o
+storage/TimeSeriesMap.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/storage/TimeSeriesMap.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/storage/TimeSeriesMap.cpp.o
+.PHONY : storage/TimeSeriesMap.cpp.o
 
-storage/tsmap.i: storage/tsmap.cpp.i
+storage/TimeSeriesMap.i: storage/TimeSeriesMap.cpp.i
 
-.PHONY : storage/tsmap.i
+.PHONY : storage/TimeSeriesMap.i
 
 # target to preprocess a source file
-storage/tsmap.cpp.i:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/tsmap.cpp.i
-.PHONY : storage/tsmap.cpp.i
+storage/TimeSeriesMap.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/storage/TimeSeriesMap.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/storage/TimeSeriesMap.cpp.i
+.PHONY : storage/TimeSeriesMap.cpp.i
 
-storage/tsmap.s: storage/tsmap.cpp.s
+storage/TimeSeriesMap.s: storage/TimeSeriesMap.cpp.s
 
-.PHONY : storage/tsmap.s
+.PHONY : storage/TimeSeriesMap.s
 
 # target to generate assembly for a file
-storage/tsmap.cpp.s:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/storage/tsmap.cpp.s
-.PHONY : storage/tsmap.cpp.s
+storage/TimeSeriesMap.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/storage/TimeSeriesMap.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/storage/TimeSeriesMap.cpp.s
+.PHONY : storage/TimeSeriesMap.cpp.s
+
+utils/PointUtils.o: utils/PointUtils.cpp.o
+
+.PHONY : utils/PointUtils.o
+
+# target to build an object file
+utils/PointUtils.cpp.o:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/utils/PointUtils.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/utils/PointUtils.cpp.o
+.PHONY : utils/PointUtils.cpp.o
+
+utils/PointUtils.i: utils/PointUtils.cpp.i
+
+.PHONY : utils/PointUtils.i
+
+# target to preprocess a source file
+utils/PointUtils.cpp.i:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/utils/PointUtils.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/utils/PointUtils.cpp.i
+.PHONY : utils/PointUtils.cpp.i
+
+utils/PointUtils.s: utils/PointUtils.cpp.s
+
+.PHONY : utils/PointUtils.s
+
+# target to generate assembly for a file
+utils/PointUtils.cpp.s:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/utils/PointUtils.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/utils/PointUtils.cpp.s
+.PHONY : utils/PointUtils.cpp.s
 
 # Help Target
 help:
@@ -346,32 +587,54 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... server"
 	@echo "... edit_cache"
-	@echo "... TSCached"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... client"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
+	@echo "... client/TSCachedClient.o"
+	@echo "... client/TSCachedClient.i"
+	@echo "... client/TSCachedClient.s"
+	@echo "... manager/ClearTaskManager.o"
+	@echo "... manager/ClearTaskManager.i"
+	@echo "... manager/ClearTaskManager.s"
+	@echo "... manager/Config.o"
+	@echo "... manager/Config.i"
+	@echo "... manager/Config.s"
+	@echo "... manager/Timer.o"
+	@echo "... manager/Timer.i"
+	@echo "... manager/Timer.s"
+	@echo "... manager/TimerManager.o"
+	@echo "... manager/TimerManager.i"
+	@echo "... manager/TimerManager.s"
 	@echo "... protobuf/point.grpc.pb.o"
 	@echo "... protobuf/point.grpc.pb.i"
 	@echo "... protobuf/point.grpc.pb.s"
 	@echo "... protobuf/point.pb.o"
 	@echo "... protobuf/point.pb.i"
 	@echo "... protobuf/point.pb.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
+	@echo "... server/TSCachedServer.o"
+	@echo "... server/TSCachedServer.i"
+	@echo "... server/TSCachedServer.s"
 	@echo "... server/TSCachedServiceImpl.o"
 	@echo "... server/TSCachedServiceImpl.i"
 	@echo "... server/TSCachedServiceImpl.s"
-	@echo "... storage/block.o"
-	@echo "... storage/block.i"
-	@echo "... storage/block.s"
-	@echo "... storage/point.o"
-	@echo "... storage/point.i"
-	@echo "... storage/point.s"
-	@echo "... storage/ts.o"
-	@echo "... storage/ts.i"
-	@echo "... storage/ts.s"
-	@echo "... storage/tsmap.o"
-	@echo "... storage/tsmap.i"
-	@echo "... storage/tsmap.s"
+	@echo "... storage/BlockData.o"
+	@echo "... storage/BlockData.i"
+	@echo "... storage/BlockData.s"
+	@echo "... storage/TimeSeries.o"
+	@echo "... storage/TimeSeries.i"
+	@echo "... storage/TimeSeries.s"
+	@echo "... storage/TimeSeriesMap.o"
+	@echo "... storage/TimeSeriesMap.i"
+	@echo "... storage/TimeSeriesMap.s"
+	@echo "... utils/PointUtils.o"
+	@echo "... utils/PointUtils.i"
+	@echo "... utils/PointUtils.s"
 .PHONY : help
 
 

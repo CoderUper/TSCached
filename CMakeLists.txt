@@ -35,18 +35,24 @@ set(_GRPC_GRPCPP gRPC::grpc++)
 
 SET(CMAKE_CXX_FLAGS -pthread)
 
-set(SOURCE_FILES server.cpp storage/point.h storage/point.cpp storage/BlockData.h storage/BlockData.cpp
-        storage/TimeSeries.h storage/TimeSeries.cpp storage/TimeSeriesMap.h storage/TimeSeriesMap.cpp protobuf/point.pb.h
+set(SOURCE_FILES storage/BlockData.h storage/BlockData.cpp storage/TimeSeries.h
+        storage/TimeSeries.cpp storage/TimeSeriesMap.h storage/TimeSeriesMap.cpp protobuf/point.pb.h
         protobuf/point.pb.cc protobuf/point.grpc.pb.h protobuf/point.grpc.pb.cc server/TSCachedServiceImpl.h server/TSCachedServiceImpl.cpp
-        utils/PointUtils.h utils/PointUtils.cpp manager/ClearTaskManager.h manager/ClearTaskManager.cpp manager/Config.cpp manager/Config.h manager/Timer.cpp
-        manager/Timer.h manager/TimerManager.cpp manager/TimerManager.h
-        server/TSCachedServer.cpp server/TSCachedServer.h client/TSCachedClient.cpp client/TSCachedClient.h client/QueryResult.h client/WriteRequest.h client.cpp)
+        utils/PointUtils.h utils/PointUtils.cpp manager/ClearTaskManager.h manager/ClearTaskManager.cpp
+        manager/Config.cpp manager/Config.h manager/Timer.cpp manager/Timer.h manager/TimerManager.cpp manager/TimerManager.h
+        server/TSCachedServer.cpp server/TSCachedServer.h client/TSCachedClient.cpp client/TSCachedClient.h client/QueryResult.h client/WriteRequest.h)
 
-add_executable(TSCached ${SOURCE_FILES} )
+file(GLOB files *.cpp)
+foreach(file ${files})
+    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
+    add_executable (${exe} ${file} ${SOURCE_FILES})
+    target_link_libraries(${exe}
+            ${_REFLECTION}
+            ${_GRPC_GRPCPP}
+            ${_PROTOBUF_LIBPROTOBUF}
+            ${FOLLY_LIBRARIES}
+            Boost::filesystem)
+    message (\ \ \ \ --\ src/${exe}.cpp\ will\ be\ compiled\ to\ bin/${exe})
+endforeach()
 
-target_link_libraries(TSCached
-        ${_REFLECTION}
-        ${_GRPC_GRPCPP}
-        ${_PROTOBUF_LIBPROTOBUF}
-        ${FOLLY_LIBRARIES}
-        Boost::filesystem)
+

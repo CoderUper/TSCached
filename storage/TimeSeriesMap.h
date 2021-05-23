@@ -40,7 +40,7 @@ public:
 
 private:
     typedef std::lock_guard<folly::RWSpinLock> RWLGuard;
-    typedef std::shared_lock<folly::RWSpinLock> RWSLGuard;
+    typedef std::shared_lock<folly::RWSpinLock> RWLSGuard;
 private:
     std::vector<std::shared_ptr<TimeSeries>> timeSeriesList_;
     std::unordered_map<std::string,std::shared_ptr<TimeSeries>> timeSeriesMap_;

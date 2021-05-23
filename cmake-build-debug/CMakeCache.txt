@@ -14,6 +14,72 @@
 # EXTERNAL cache entries
 ########################
 
+//Boost atomic library (debug)
+Boost_ATOMIC_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_atomic.so
+
+//Boost atomic library (release)
+Boost_ATOMIC_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_atomic.so
+
+//Boost chrono library (debug)
+Boost_CHRONO_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_chrono.so
+
+//Boost chrono library (release)
+Boost_CHRONO_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_chrono.so
+
+//Boost context library (debug)
+Boost_CONTEXT_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_context.so
+
+//Boost context library (release)
+Boost_CONTEXT_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_context.so
+
+//Boost date_time library (debug)
+Boost_DATE_TIME_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
+
+//Boost date_time library (release)
+Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Boost filesystem library (debug)
+Boost_FILESYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
+//Boost filesystem library (release)
+Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost library directory DEBUG
+Boost_LIBRARY_DIR_DEBUG:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost library directory RELEASE
+Boost_LIBRARY_DIR_RELEASE:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost program_options library (debug)
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_program_options.so
+
+//Boost program_options library (release)
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_program_options.so
+
+//Boost regex library (debug)
+Boost_REGEX_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_regex.so
+
+//Boost regex library (release)
+Boost_REGEX_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_regex.so
+
+//Boost system library (debug)
+Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost system library (release)
+Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -220,11 +286,17 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//The directory containing a CMake configuration file for Folly.
+Folly_DIR:PATH=/usr/local/lib/cmake/folly
+
 //Path to a program.
 ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
+
+//The directory containing a CMake configuration file for Protobuf.
+Protobuf_DIR:PATH=/usr/local/lib/cmake/protobuf
 
 //Value Computed by CMake
 TSCached_BINARY_DIR:STATIC=/mnt/e/Clion/TSCached/cmake-build-debug
@@ -232,11 +304,64 @@ TSCached_BINARY_DIR:STATIC=/mnt/e/Clion/TSCached/cmake-build-debug
 //Value Computed by CMake
 TSCached_SOURCE_DIR:STATIC=/mnt/e/Clion/TSCached
 
+//The directory containing a CMake configuration file for fmt.
+fmt_DIR:PATH=/usr/local/lib/cmake/fmt
+
+//The directory containing a CMake configuration file for gRPC.
+gRPC_DIR:PATH=/usr/local/lib/cmake/grpc
+
+//Enable for verbose output
+protobuf_VERBOSE:BOOL=OFF
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_DEBUG
+Boost_ATOMIC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_ATOMIC_LIBRARY_RELEASE
+Boost_ATOMIC_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_DEBUG
+Boost_CHRONO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CHRONO_LIBRARY_RELEASE
+Boost_CHRONO_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CONTEXT_LIBRARY_DEBUG
+Boost_CONTEXT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_CONTEXT_LIBRARY_RELEASE
+Boost_CONTEXT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_DEBUG
+Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_RELEASE
+Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_DEBUG
+Boost_FILESYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_RELEASE
+Boost_FILESYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_DEBUG
+Boost_LIBRARY_DIR_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR_RELEASE
+Boost_LIBRARY_DIR_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG
+Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE
+Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_REGEX_LIBRARY_DEBUG
+Boost_REGEX_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_REGEX_LIBRARY_RELEASE
+Boost_REGEX_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
+Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
+Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -323,6 +448,14 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
+//Have library pthreads
+CMAKE_HAVE_PTHREADS_CREATE:INTERNAL=
+//Have library pthread
+CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
+//Have include pthread.h
+CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/mnt/e/Clion/TSCached
@@ -388,8 +521,30 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/include][cfound components: context filesystem program_options regex system thread chrono date_time atomic ][v1.65.1(1.51.0)]
+//Details about finding Protobuf
+FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/usr/local/bin/protoc-3.11.2.0][/usr/local/lib/libprotobuf.a][/usr/local/include][v3.11.2.0()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: ProcessorCount_cmd_nproc
 ProcessorCount_cmd_nproc-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ProcessorCount_cmd_sysctl
 ProcessorCount_cmd_sysctl-ADVANCED:INTERNAL=1
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=atomic;chrono;context;date_time;filesystem;program_options;regex;system;thread
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR_DEBUG value.
+_Boost_LIBRARY_DIR_DEBUG_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_LIBRARY_DIR_RELEASE value.
+_Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_NAMESPACE value.
+_Boost_NAMESPACE_LAST:INTERNAL=boost
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+//Last used Boost_USE_STATIC_LIBS value.
+_Boost_USE_STATIC_LIBS_LAST:INTERNAL=OFF
+//ADVANCED property for variable: protobuf_VERBOSE
+protobuf_VERBOSE-ADVANCED:INTERNAL=1
 

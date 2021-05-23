@@ -9,9 +9,9 @@
 namespace TSCached{
 
 TimeSeries::TimeSeries(std::string&  key,std::shared_ptr<TimerManager>& timerManager)
-:key_(std::move(key)),dataBlockNum_(1),
+:key_(key),dataBlockNum_(1),
 pointNum_(0),state_(State::ALIVE),startTime_(-1),endTime_(-1),
-openBlock_(std::unique_ptr<BlockData>()),
+openBlock_(std::make_unique<BlockData>()),
 timerManager_(timerManager)
 {
     //初始化第一块block的定时事件

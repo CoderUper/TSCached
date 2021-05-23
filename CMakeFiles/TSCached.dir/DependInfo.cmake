@@ -4,13 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jinzhuguang/code/TSCached/main.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/main.cpp.o"
+  "/home/jinzhuguang/code/TSCached/client.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/client.cpp.o"
+  "/home/jinzhuguang/code/TSCached/client/TSCachedClient.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.o"
   "/home/jinzhuguang/code/TSCached/manager/ClearTaskManager.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/manager/ClearTaskManager.cpp.o"
   "/home/jinzhuguang/code/TSCached/manager/Config.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/manager/Config.cpp.o"
   "/home/jinzhuguang/code/TSCached/manager/Timer.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/manager/Timer.cpp.o"
   "/home/jinzhuguang/code/TSCached/manager/TimerManager.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/manager/TimerManager.cpp.o"
   "/home/jinzhuguang/code/TSCached/protobuf/point.grpc.pb.cc" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/protobuf/point.grpc.pb.cc.o"
   "/home/jinzhuguang/code/TSCached/protobuf/point.pb.cc" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/protobuf/point.pb.cc.o"
+  "/home/jinzhuguang/code/TSCached/server.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/server.cpp.o"
   "/home/jinzhuguang/code/TSCached/server/TSCachedServer.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/server/TSCachedServer.cpp.o"
   "/home/jinzhuguang/code/TSCached/server/TSCachedServiceImpl.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/server/TSCachedServiceImpl.cpp.o"
   "/home/jinzhuguang/code/TSCached/storage/BlockData.cpp" "/home/jinzhuguang/code/TSCached/CMakeFiles/TSCached.dir/storage/BlockData.cpp.o"

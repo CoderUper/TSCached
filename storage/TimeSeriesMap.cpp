@@ -18,6 +18,7 @@ timerManager_(timerManager)
 void TimeSeriesMap::AppendPoint(const Point &point){
     RWLGuard guard(rwSpinLock_);
     std::string key = PointUtils::GetKey(point);
+    assert(!key.empty());
     if (timeSeriesMap_.count(key)==0){
         //该时间序列不存在，新产生一个
         auto timeSeries = std::make_shared<TimeSeries>(key,timerManager_);
@@ -52,8 +53,9 @@ void TimeSeriesMap::Delete(std::string& key) {
 
 void TimeSeriesMap::Query(const QueryRequest &queryRequest,QueryResponse& queryResponse)  {
     //加上读锁
-    RWSLGuard guard(rwSpinLock_);
+    RWLSGuard guard(rwSpinLock_);
     std::string key  = PointUtils::GetKey(queryRequest);
+    assert(!key.empty());
     if (timeSeriesMap_.count(key)==0){
         XLOGF(WARNING,"TimeSeries %s is Not Exist\n",key);
         return;

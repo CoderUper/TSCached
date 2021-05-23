@@ -6,8 +6,10 @@
 #define TSCACHED_TIMERMANAGER_H
 
 #include "Timer.h"
-#include <folly/MicroSpinLock.h>
+#include <folly/RWSpinLock.h>
 #include <memory>
+#include <mutex>
+#include <shared_mutex>
 #include <queue>
 
 
@@ -15,6 +17,9 @@ namespace TSCached{
 
 class TimerManager {
 public:
+    typedef std::lock_guard<folly::RWSpinLock> RWLGuard;
+    typedef std::shared_lock<folly::RWSpinLock> RWLSGuard;
+
     TimerManager() = default;
     std::shared_ptr<Timer> AddTimer(uint64_t timeout,const Timer::Callback& callback);
     std::shared_ptr<Timer> AddClearTimer(uint64_t timeout,const Timer::Callback& callback);
@@ -32,6 +37,9 @@ private:
             return lhs->GetExpireTime() > rhs->GetExpireTime();
         }
     };
+
+    mutable folly::RWSpinLock rwSpinLock_;
+
 //    folly::MicroSpinLock microSpinLock_;
 //    typedef folly::MSLGuard MSLGuard;
     //清理过期TS，新block结束周期的定时事件

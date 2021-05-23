@@ -57,18 +57,18 @@ include CMakeFiles/TSCached.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TSCached.dir/flags.make
 
-CMakeFiles/TSCached.dir/main.cpp.o: CMakeFiles/TSCached.dir/flags.make
-CMakeFiles/TSCached.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jinzhuguang/code/TSCached/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TSCached.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TSCached.dir/main.cpp.o -c /home/jinzhuguang/code/TSCached/main.cpp
+CMakeFiles/TSCached.dir/server.cpp.o: CMakeFiles/TSCached.dir/flags.make
+CMakeFiles/TSCached.dir/server.cpp.o: server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jinzhuguang/code/TSCached/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TSCached.dir/server.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TSCached.dir/server.cpp.o -c /home/jinzhuguang/code/TSCached/server.cpp
 
-CMakeFiles/TSCached.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TSCached.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jinzhuguang/code/TSCached/main.cpp > CMakeFiles/TSCached.dir/main.cpp.i
+CMakeFiles/TSCached.dir/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TSCached.dir/server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jinzhuguang/code/TSCached/server.cpp > CMakeFiles/TSCached.dir/server.cpp.i
 
-CMakeFiles/TSCached.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TSCached.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jinzhuguang/code/TSCached/main.cpp -o CMakeFiles/TSCached.dir/main.cpp.s
+CMakeFiles/TSCached.dir/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TSCached.dir/server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jinzhuguang/code/TSCached/server.cpp -o CMakeFiles/TSCached.dir/server.cpp.s
 
 CMakeFiles/TSCached.dir/storage/point.cpp.o: CMakeFiles/TSCached.dir/flags.make
 CMakeFiles/TSCached.dir/storage/point.cpp.o: storage/point.cpp
@@ -239,9 +239,35 @@ CMakeFiles/TSCached.dir/server/TSCachedServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TSCached.dir/server/TSCachedServer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jinzhuguang/code/TSCached/server/TSCachedServer.cpp -o CMakeFiles/TSCached.dir/server/TSCachedServer.cpp.s
 
+CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.o: CMakeFiles/TSCached.dir/flags.make
+CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.o: client/TSCachedClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jinzhuguang/code/TSCached/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.o -c /home/jinzhuguang/code/TSCached/client/TSCachedClient.cpp
+
+CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jinzhuguang/code/TSCached/client/TSCachedClient.cpp > CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.i
+
+CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jinzhuguang/code/TSCached/client/TSCachedClient.cpp -o CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.s
+
+CMakeFiles/TSCached.dir/client.cpp.o: CMakeFiles/TSCached.dir/flags.make
+CMakeFiles/TSCached.dir/client.cpp.o: client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jinzhuguang/code/TSCached/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TSCached.dir/client.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TSCached.dir/client.cpp.o -c /home/jinzhuguang/code/TSCached/client.cpp
+
+CMakeFiles/TSCached.dir/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TSCached.dir/client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jinzhuguang/code/TSCached/client.cpp > CMakeFiles/TSCached.dir/client.cpp.i
+
+CMakeFiles/TSCached.dir/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TSCached.dir/client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jinzhuguang/code/TSCached/client.cpp -o CMakeFiles/TSCached.dir/client.cpp.s
+
 # Object files for target TSCached
 TSCached_OBJECTS = \
-"CMakeFiles/TSCached.dir/main.cpp.o" \
+"CMakeFiles/TSCached.dir/server.cpp.o" \
 "CMakeFiles/TSCached.dir/storage/point.cpp.o" \
 "CMakeFiles/TSCached.dir/storage/BlockData.cpp.o" \
 "CMakeFiles/TSCached.dir/storage/TimeSeries.cpp.o" \
@@ -254,12 +280,14 @@ TSCached_OBJECTS = \
 "CMakeFiles/TSCached.dir/manager/Config.cpp.o" \
 "CMakeFiles/TSCached.dir/manager/Timer.cpp.o" \
 "CMakeFiles/TSCached.dir/manager/TimerManager.cpp.o" \
-"CMakeFiles/TSCached.dir/server/TSCachedServer.cpp.o"
+"CMakeFiles/TSCached.dir/server/TSCachedServer.cpp.o" \
+"CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.o" \
+"CMakeFiles/TSCached.dir/client.cpp.o"
 
 # External object files for target TSCached
 TSCached_EXTERNAL_OBJECTS =
 
-TSCached: CMakeFiles/TSCached.dir/main.cpp.o
+TSCached: CMakeFiles/TSCached.dir/server.cpp.o
 TSCached: CMakeFiles/TSCached.dir/storage/point.cpp.o
 TSCached: CMakeFiles/TSCached.dir/storage/BlockData.cpp.o
 TSCached: CMakeFiles/TSCached.dir/storage/TimeSeries.cpp.o
@@ -273,6 +301,8 @@ TSCached: CMakeFiles/TSCached.dir/manager/Config.cpp.o
 TSCached: CMakeFiles/TSCached.dir/manager/Timer.cpp.o
 TSCached: CMakeFiles/TSCached.dir/manager/TimerManager.cpp.o
 TSCached: CMakeFiles/TSCached.dir/server/TSCachedServer.cpp.o
+TSCached: CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.o
+TSCached: CMakeFiles/TSCached.dir/client.cpp.o
 TSCached: CMakeFiles/TSCached.dir/build.make
 TSCached: /usr/local/lib/libgrpc++_reflection.a
 TSCached: /usr/local/lib/libgrpc++.a
@@ -323,7 +353,7 @@ TSCached: /usr/lib/x86_64-linux-gnu/libiberty.a
 TSCached: /usr/lib/x86_64-linux-gnu/libunwind.so
 TSCached: /usr/lib/x86_64-linux-gnu/libboost_system.so
 TSCached: CMakeFiles/TSCached.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jinzhuguang/code/TSCached/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable TSCached"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jinzhuguang/code/TSCached/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable TSCached"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TSCached.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

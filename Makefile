@@ -123,32 +123,59 @@ TSCached/fast:
 	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/build
 .PHONY : TSCached/fast
 
-main.o: main.cpp.o
+client.o: client.cpp.o
 
-.PHONY : main.o
+.PHONY : client.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/main.cpp.o
-.PHONY : main.cpp.o
+client.cpp.o:
+	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/client.cpp.o
+.PHONY : client.cpp.o
 
-main.i: main.cpp.i
+client.i: client.cpp.i
 
-.PHONY : main.i
+.PHONY : client.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/main.cpp.i
-.PHONY : main.cpp.i
+client.cpp.i:
+	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/client.cpp.i
+.PHONY : client.cpp.i
 
-main.s: main.cpp.s
+client.s: client.cpp.s
 
-.PHONY : main.s
+.PHONY : client.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/main.cpp.s
-.PHONY : main.cpp.s
+client.cpp.s:
+	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/client.cpp.s
+.PHONY : client.cpp.s
+
+client/TSCachedClient.o: client/TSCachedClient.cpp.o
+
+.PHONY : client/TSCachedClient.o
+
+# target to build an object file
+client/TSCachedClient.cpp.o:
+	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.o
+.PHONY : client/TSCachedClient.cpp.o
+
+client/TSCachedClient.i: client/TSCachedClient.cpp.i
+
+.PHONY : client/TSCachedClient.i
+
+# target to preprocess a source file
+client/TSCachedClient.cpp.i:
+	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.i
+.PHONY : client/TSCachedClient.cpp.i
+
+client/TSCachedClient.s: client/TSCachedClient.cpp.s
+
+.PHONY : client/TSCachedClient.s
+
+# target to generate assembly for a file
+client/TSCachedClient.cpp.s:
+	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/client/TSCachedClient.cpp.s
+.PHONY : client/TSCachedClient.cpp.s
 
 manager/ClearTaskManager.o: manager/ClearTaskManager.cpp.o
 
@@ -311,6 +338,33 @@ protobuf/point.pb.s: protobuf/point.pb.cc.s
 protobuf/point.pb.cc.s:
 	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/protobuf/point.pb.cc.s
 .PHONY : protobuf/point.pb.cc.s
+
+server.o: server.cpp.o
+
+.PHONY : server.o
+
+# target to build an object file
+server.cpp.o:
+	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/server.cpp.o
+.PHONY : server.cpp.o
+
+server.i: server.cpp.i
+
+.PHONY : server.i
+
+# target to preprocess a source file
+server.cpp.i:
+	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/server.cpp.i
+.PHONY : server.cpp.i
+
+server.s: server.cpp.s
+
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.cpp.s:
+	$(MAKE) -f CMakeFiles/TSCached.dir/build.make CMakeFiles/TSCached.dir/server.cpp.s
+.PHONY : server.cpp.s
 
 server/TSCachedServer.o: server/TSCachedServer.cpp.o
 
@@ -510,9 +564,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TSCached"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
+	@echo "... client/TSCachedClient.o"
+	@echo "... client/TSCachedClient.i"
+	@echo "... client/TSCachedClient.s"
 	@echo "... manager/ClearTaskManager.o"
 	@echo "... manager/ClearTaskManager.i"
 	@echo "... manager/ClearTaskManager.s"
@@ -531,6 +588,9 @@ help:
 	@echo "... protobuf/point.pb.o"
 	@echo "... protobuf/point.pb.i"
 	@echo "... protobuf/point.pb.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 	@echo "... server/TSCachedServer.o"
 	@echo "... server/TSCachedServer.i"
 	@echo "... server/TSCachedServer.s"

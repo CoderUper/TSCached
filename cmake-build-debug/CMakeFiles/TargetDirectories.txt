@@ -1,3 +1,4 @@
 /mnt/e/Clion/TSCached/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/e/Clion/TSCached/cmake-build-debug/CMakeFiles/server.dir
 /mnt/e/Clion/TSCached/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/e/Clion/TSCached/cmake-build-debug/CMakeFiles/TSCached.dir
+/mnt/e/Clion/TSCached/cmake-build-debug/CMakeFiles/client.dir
