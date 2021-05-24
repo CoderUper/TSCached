@@ -1,0 +1,23 @@
+#以下数据请根据实际内存容量以及数据量合理配置,必须为正数。
+
+#服务器监听的IP地址
+serverAddress: 127.0.0.1:50000  #默认地址
+
+#logo地址
+bannerPath: ./server/banner.txt
+
+#一个数据块接收数据的时间长度，超过这个时间将会关闭，并产生新的数据块，单位s
+changeDataBlockTime: 7200
+
+#清理已删除时间序列的时间周期,单位s
+purgeTimeSeriesTime: 60
+
+#一个数据块的保留时间,单位s
+reserveDataBlockTime: 43200  #12*60*60 12小时
+
+#为避免回收时间序列太耗时太耗内存，限制一次最多回收的个数
+maxPurgeTimeSeriesNum: 100
+
+#最大内存使用限制,单位Byte
+maxMemoryUsage: 3221225472  #3*1024*1024*1024 3GB
+

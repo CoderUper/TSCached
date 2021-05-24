@@ -23,7 +23,7 @@ namespace TSCached{
 
 class TimeSeriesMap{
 public:
-    explicit TimeSeriesMap(std::shared_ptr<TimerManager> timerManager) ;
+    explicit TimeSeriesMap(std::shared_ptr<TimerManager> timerManager,Config&) ;
     ~TimeSeriesMap() = default;
     TimeSeriesMap(const TimeSeriesMap&) = delete ;
     TimeSeriesMap& operator=(const TimeSeriesMap&) = delete ;
@@ -52,6 +52,8 @@ private:
     uint64_t pointNum_ ;
     uint64_t timeSeriesNum_;
 
+    //配置项
+    Config config_;
     //时间管理器
     std::shared_ptr<TimerManager> timerManager_;
 };

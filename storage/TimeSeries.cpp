@@ -8,15 +8,16 @@
 
 namespace TSCached{
 
-TimeSeries::TimeSeries(std::string&  key,std::shared_ptr<TimerManager>& timerManager)
+TimeSeries::TimeSeries(std::string&  key,std::shared_ptr<TimerManager>& timerManager,Config* config)
 :key_(key),dataBlockNum_(1),
+config_(config),
 pointNum_(0),state_(State::ALIVE),startTime_(-1),endTime_(-1),
 openBlock_(std::make_unique<BlockData>()),
 timerManager_(timerManager)
 {
     //初始化第一块block的定时事件
     //存活Config::changeDataBlockTime后，关闭该数据块；
-    timerManager_->AddTimer(openBlock_->GetCreatedTime()+Config::changeDataBlockTime,
+    timerManager_->AddTimer(openBlock_->GetCreatedTime()+config_->changeDataBlockTime,
             [this]{ProduceNewBlock();});
 }
 
@@ -100,12 +101,12 @@ void TimeSeries::ProduceNewBlock() {
     SLGuard guard(spinLock_);
     //关闭旧的数据块
     openBlock_->SetClosed();
-    timerManager_->AddClearTimer(time(nullptr)+Config::reserveDataBlockTime,
+    timerManager_->AddClearTimer(time(nullptr)+config_->reserveDataBlockTime,
             [this]{TimeSeries::ClearExpiredBlock();});
     closedBlocks_.push_back(std::move(openBlock_));
     //产生新的数据块
     openBlock_ = std::make_unique<BlockData>();
-    timerManager_->AddTimer(openBlock_->GetCreatedTime()+Config::changeDataBlockTime,
+    timerManager_->AddTimer(openBlock_->GetCreatedTime()+config_->changeDataBlockTime,
             [this]{TimeSeries::ProduceNewBlock();});
     ++dataBlockNum_;
     XLOGF(INFO,"TimeSeries %s Produce New Block Successful!\n",key_);
@@ -117,7 +118,7 @@ void TimeSeries::ClearExpiredBlock() {
     time_t now = time(nullptr);
     for (auto blockIt = closedBlocks_.begin();blockIt!=closedBlocks_.end();) {
         //若没有过期则退出
-        if (now - (*blockIt)->GetEndTime() < Config::reserveDataBlockTime){
+        if (now - (*blockIt)->GetEndTime() < config_->reserveDataBlockTime){
             break;
         }
         //超时的话则清除数据

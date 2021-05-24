@@ -7,21 +7,22 @@
 
 #include "TSCachedServiceImpl.h"
 #include "manager/ClearTaskManager.h"
+#include <yaml-cpp/yaml.h>
 #include <fstream>
 
 namespace TSCached{
 
 class TSCachedServer {
 public:
-    explicit TSCachedServer(std::string networkAddr);
+    explicit TSCachedServer();
     void Run() ;
 
 private:
-    void InitBanner();
-    void InitGRPCServer();
+    void InitBanner(Config&);
+    void InitGRPCServer(Config&);
+    void InitConfig(Config&);
 private:
-    std::string bannerPath_;
-    std::string networkAddr_;
+
     std::shared_ptr<TimerManager> timeManager_;
     std::shared_ptr<ClearTaskManager> clearTaskManager_;
 };

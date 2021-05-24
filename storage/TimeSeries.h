@@ -22,7 +22,7 @@ public:
 
     typedef std::lock_guard<folly::SpinLock> SLGuard;
 
-    explicit TimeSeries(std::string&  key,std::shared_ptr<TimerManager>&);
+    explicit TimeSeries(std::string&  key,std::shared_ptr<TimerManager>&,Config* config);
     ~TimeSeries() = default;
     void AppendPoint(const Point& point);
 
@@ -43,7 +43,8 @@ public:
 
     void ClearExpiredBlock();
 private:
-
+    //配置项
+    const Config* config_;
     //起止时间
     time_t startTime_;
     time_t endTime_;

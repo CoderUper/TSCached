@@ -51,7 +51,8 @@ foreach(file ${files})
             ${_GRPC_GRPCPP}
             ${_PROTOBUF_LIBPROTOBUF}
             ${FOLLY_LIBRARIES}
-            Boost::filesystem)
+            Boost::filesystem
+            libyaml-cpp.so)
     message (\ \ \ \ --\ src/${exe}.cpp\ will\ be\ compiled\ to\ bin/${exe})
 endforeach()
 

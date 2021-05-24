@@ -5,12 +5,13 @@
 
 namespace TSCached{
 
-TimeSeriesMap::TimeSeriesMap(std::shared_ptr<TimerManager> timerManager):
+TimeSeriesMap::TimeSeriesMap(std::shared_ptr<TimerManager> timerManager,Config& config):
 pointNum_(0),
 timeSeriesNum_(0),
+config_(config),
 timerManager_(timerManager)
 {
-    timerManager_->AddTimer(time(nullptr)+Config::purgeTimeSeriesTime,
+    timerManager_->AddTimer(time(nullptr)+config_.purgeTimeSeriesTime,
             [this] { ClearExpiredTimeSeries(); });
 }
 
@@ -21,7 +22,7 @@ void TimeSeriesMap::AppendPoint(const Point &point){
     assert(!key.empty());
     if (timeSeriesMap_.count(key)==0){
         //该时间序列不存在，新产生一个
-        auto timeSeries = std::make_shared<TimeSeries>(key,timerManager_);
+        auto timeSeries = std::make_shared<TimeSeries>(key,timerManager_,&config_);
         timeSeriesMap_[key] = timeSeries;
         timeSeriesList_.push_back(timeSeries);
     }
@@ -67,7 +68,7 @@ void TimeSeriesMap::ClearExpiredTimeSeries() {
     RWLGuard guard(rwSpinLock_);
     //清理过期的TS
     uint64_t clearedTimeSeriesNum = 0;
-    while (!expiredTimeSeries_.empty() &&clearedTimeSeriesNum < Config::maxPurgeTimeSeriesNum){
+    while (!expiredTimeSeries_.empty() &&clearedTimeSeriesNum < config_.maxPurgeTimeSeriesNum){
         //删除开头的时间序列
         expiredTimeSeries_.erase(expiredTimeSeries_.begin());
         //已经清理的个数增加
@@ -75,7 +76,7 @@ void TimeSeriesMap::ClearExpiredTimeSeries() {
     }
 
     //清理完成后，重新设置定时器便于下次清理
-    timerManager_->AddTimer(time(nullptr)+Config::purgeTimeSeriesTime,
+    timerManager_->AddTimer(time(nullptr)+config_.purgeTimeSeriesTime,
             [this] { ClearExpiredTimeSeries(); });
 }
 
