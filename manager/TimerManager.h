@@ -6,11 +6,12 @@
 #define TSCACHED_TIMERMANAGER_H
 
 #include "Timer.h"
-#include <folly/RWSpinLock.h>
 #include <memory>
 #include <mutex>
 #include <shared_mutex>
+#include <folly/RWSpinLock.h>
 #include <queue>
+#include <condition_variable>
 
 
 namespace TSCached{
@@ -38,8 +39,9 @@ private:
         }
     };
 
-    mutable folly::RWSpinLock rwSpinLock_;
-
+    mutable std::mutex mutex1_;
+    mutable std::mutex mutex2_;
+//    std::condition_variable_any
 //    folly::MicroSpinLock microSpinLock_;
 //    typedef folly::MSLGuard MSLGuard;
     //清理过期TS，新block结束周期的定时事件

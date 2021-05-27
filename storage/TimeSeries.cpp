@@ -101,7 +101,7 @@ void TimeSeries::ProduceNewBlock() {
     SLGuard guard(spinLock_);
     //关闭旧的数据块
     openBlock_->SetClosed();
-    timerManager_->AddClearTimer(time(nullptr)+config_->reserveDataBlockTime,
+    timerManager_->AddClearTimer(openBlock_->GetClosedTime()+config_->reserveDataBlockTime,
             [this]{TimeSeries::ClearExpiredBlock();});
     closedBlocks_.push_back(std::move(openBlock_));
     //产生新的数据块
@@ -109,7 +109,7 @@ void TimeSeries::ProduceNewBlock() {
     timerManager_->AddTimer(openBlock_->GetCreatedTime()+config_->changeDataBlockTime,
             [this]{TimeSeries::ProduceNewBlock();});
     ++dataBlockNum_;
-    XLOGF(INFO,"TimeSeries %s Produce New Block Successful!\n",key_);
+    XLOGF(INFO,"TimeSeries %s Produce New Block Successful!\n",key_.c_str());
 }
 
 void TimeSeries::ClearExpiredBlock() {

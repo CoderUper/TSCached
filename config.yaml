@@ -7,7 +7,7 @@ serverAddress: 127.0.0.1:50000  #默认地址
 bannerPath: ./server/banner.txt
 
 #一个数据块接收数据的时间长度，超过这个时间将会关闭，并产生新的数据块，单位s
-changeDataBlockTime: 7200
+changeDataBlockTime: 60
 
 #清理已删除时间序列的时间周期,单位s
 purgeTimeSeriesTime: 60

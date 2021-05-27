@@ -39,6 +39,9 @@ public:
     //获取数据块创建事件
     [[nodiscard]] uint64_t GetCreatedTime() const ;
 
+    //获取关闭时间
+    uint64_t GetClosedTime() const ;
+
     //获取数据块中数据的结束时间
     [[nodiscard]] uint64_t GetEndTime() const ;
 
@@ -49,7 +52,8 @@ private:
     time_t endTime_;
     StatusCode statusCode_; //是否在打开
     time_t createdTime_; //该block创建时间
-
+    //关闭时间
+    time_t closedTime_;
     typedef std::vector<double> dataList;
     std::vector<time_t> timeList_;
     std::map<std::string,dataList> data_;

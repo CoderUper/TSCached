@@ -23,7 +23,7 @@ timeSeriesMap_(timeSeriesMap)
 ::grpc::Status TSCachedServiceImpl::QueryPoints(::grpc::ServerContext *context, const ::TSCached::QueryRequest *request,
         ::TSCached::QueryResponse *response) {
     assert(timeSeriesMap_);
-    XLOGF(INFO,"Query  Request From Peer : %s ",context->peer());
+    XLOGF(INFO,"Query Request From : %s",context->peer().c_str());
     if (!request->IsInitialized()){
         return Status::CANCELLED;
     }
@@ -36,7 +36,7 @@ timeSeriesMap_(timeSeriesMap)
 ::grpc::Status TSCachedServiceImpl::WritePoints(::grpc::ServerContext *context, const ::TSCached::WriteRequest *request,
     ::TSCached::WriteResponse *response) {
     assert(timeSeriesMap_);
-    XLOGF(INFO,"Write Request From Peer : %s .",context->peer());
+    XLOGF(INFO,"Query Request From : %s",context->peer().c_str());
     if (!request->IsInitialized()){
         return Status::CANCELLED;
     }

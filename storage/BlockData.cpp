@@ -75,6 +75,7 @@ void BlockData::Query(const QueryRequest &queryRequest, QueryResponse &queryResp
 
 void BlockData::SetClosed() {
     statusCode_ = BlockData::CLOSED;
+    closedTime_ = time(nullptr);
 }
 
 uint64_t BlockData::GetPointNum() const {
@@ -87,6 +88,10 @@ uint64_t BlockData::GetCreatedTime() const {
 
 uint64_t BlockData::GetEndTime() const {
     return endTime_;
+}
+
+uint64_t BlockData::GetClosedTime() const {
+    return closedTime_;
 }
 //
 //void BlockData::SetOpen() {
